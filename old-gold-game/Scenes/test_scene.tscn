@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ecjclnd0ubth"]
+
+[ext_resource type="Texture2D" uid="uid://cr05ws780ipit" path="res://Assets/Sprites/Pan.png" id="1_3dogw"]
+[ext_resource type="Script" uid="uid://d1ueyim0sbkvk" path="res://Scripts/Panner.gd" id="1_hb2xm"]
+[ext_resource type="Texture2D" uid="uid://bl4hrkxoxsy0j" path="res://Assets/Sprites/GoldDuck.png" id="2_50ct6"]
+[ext_resource type="Texture2D" uid="uid://bn20tg58gv518" path="res://Assets/Sprites/Dirt.png" id="2_r5l72"]
+
+[node name="TestScene" type="Node2D" unique_id=1618907069]
+script = ExtResource("1_hb2xm")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=177339963]
+
+[node name="PanSprite" type="Sprite2D" parent="." unique_id=1524625846]
+texture_filter = 3
+scale = Vector2(5.40625, 5.40625)
+texture = ExtResource("1_3dogw")
+
+[node name="GoldSprite" type="Sprite2D" parent="PanSprite" unique_id=288017580]
+texture_filter = 3
+scale = Vector2(0.4566474, 0.4566474)
+texture = ExtResource("2_50ct6")
+
+[node name="DirtSprite" type="Sprite2D" parent="PanSprite" unique_id=499992845]
+texture_filter = 3
+scale = Vector2(0.80346817, 0.80346817)
+texture = ExtResource("2_r5l72")
+hframes = 2
+vframes = 3
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 192)

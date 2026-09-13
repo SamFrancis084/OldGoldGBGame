@@ -31,6 +31,11 @@ var has_lost : bool = false
 
 var move_input : Vector2 = Vector2.ZERO
 
+@export_category("Audio")
+@export var sift_stream : AudioStream
+@export var timer_stream : AudioStream
+var interval : float = 1.0
+var tick_timer : float = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -52,6 +57,12 @@ func _process(delta):
 	pan_sprite.global_position = move_input * offset_dist
 	
 	attempt_label.text = "Attempts Left: " + str(max_wrong_attempts - wrong_attempts)
+	
+	#for ticking
+	tick_timer += delta
+	if tick_timer >= interval:
+		AudioTools.PlayClip(timer_stream)
+		tick_timer = 0.0
 	
 	timer -= delta
 	if timer < 0:
@@ -90,6 +101,7 @@ func _input(event):
 				lose()
 				has_lost = true
 		
+		if sift_stream: AudioTools.PlayClip(sift_stream, 0.0, 1.0, true)
 		get_random_button()
 
 func button_tracker():

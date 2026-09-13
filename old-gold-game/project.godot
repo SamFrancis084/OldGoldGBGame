@@ -15,6 +15,10 @@ run/main_scene="uid://ecjclnd0ubth"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioTools="*uid://dkin74l1ulm0b"
+
 [input]
 
 Left={

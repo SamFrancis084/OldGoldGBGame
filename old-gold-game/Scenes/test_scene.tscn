@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cr05ws780ipit" path="res://Assets/Sprites/Pan.png" id="1_3dogw"]
 [ext_resource type="Script" uid="uid://d1ueyim0sbkvk" path="res://Scripts/Panner.gd" id="1_hb2xm"]
 [ext_resource type="Texture2D" uid="uid://bl4hrkxoxsy0j" path="res://Assets/Sprites/GoldDuck.png" id="2_50ct6"]
+[ext_resource type="AudioStream" uid="uid://1ygue56pgetp" path="res://Assets/Audio/sift.wav" id="2_ak5v8"]
 [ext_resource type="Texture2D" uid="uid://bn20tg58gv518" path="res://Assets/Sprites/Dirt.png" id="2_r5l72"]
+[ext_resource type="AudioStream" uid="uid://jeni1go0bsvq" path="res://Assets/Audio/timer.wav" id="3_x033f"]
 
 [sub_resource type="Animation" id="Animation_hb2xm"]
 length = 0.001
@@ -118,6 +120,8 @@ _data = {
 [node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("victory_screen")]
 script = ExtResource("1_hb2xm")
 victory_screen = NodePath("CanvasLayer/VictoryControl")
+sift_stream = ExtResource("2_ak5v8")
+timer_stream = ExtResource("3_x033f")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=177339963]
 

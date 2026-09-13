@@ -7,9 +7,9 @@
 size = Vector2(41, 57)
 
 [node name="test movement_scene" type="Node2D" unique_id=27736371]
-position = Vector2(491, 296)
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=537363910]
+position = Vector2(345, 167)
 script = ExtResource("1_cqoxo")
 SPD = 5000
 tileSize = 32

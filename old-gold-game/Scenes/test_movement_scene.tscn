@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://de6yo5xh7r861"]
+
+[ext_resource type="Script" uid="uid://cxjuun8w73cd1" path="res://Scripts/player_movement.gd" id="1_cqoxo"]
+[ext_resource type="Texture2D" uid="uid://bl4hrkxoxsy0j" path="res://Assets/Sprites/GoldDuck.png" id="1_xyr7o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqoxo"]
+size = Vector2(41, 57)
+
+[node name="test movement_scene" type="Node2D" unique_id=27736371]
+position = Vector2(491, 296)
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=537363910]
+script = ExtResource("1_cqoxo")
+SPD = 5000
+tileSize = 32
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1227350027]
+position = Vector2(0, 2)
+texture = ExtResource("1_xyr7o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=514228860]
+visible = false
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_cqoxo")

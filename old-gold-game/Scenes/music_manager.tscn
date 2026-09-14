@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bydgyakpcx7og"]
+
+[ext_resource type="Script" uid="uid://cdb1x17xejb4e" path="res://Scripts/music_manager.gd" id="1_760hw"]
+[ext_resource type="AudioStream" uid="uid://df5ceotljnrof" path="res://Assets/Audio/slow_cowboy.mp3" id="2_sdmu8"]
+[ext_resource type="AudioStream" uid="uid://dgvmvmg4geksg" path="res://Assets/Audio/fast_cowboy2.mp3" id="3_b40f5"]
+
+[node name="MusicManager" type="AudioStreamPlayer" unique_id=1689053142]
+script = ExtResource("1_760hw")
+slow_song = ExtResource("2_sdmu8")
+fast_song = ExtResource("3_b40f5")

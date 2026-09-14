@@ -8,7 +8,6 @@ var start_pos : Vector2 = Vector2.ZERO
 @onready var dirt_sprite = $PanSprite/DirtSprite
 
 @onready var label : Label = $CanvasLayer/Control/Label
-@onready var attempt_label = $CanvasLayer/Control/AttemptLabel
 @onready var time_left = $CanvasLayer/Control/TimeLeft
 
 
@@ -23,10 +22,9 @@ var has_won : bool = false
 @export var victory_screen : Control
 
 @export_category("Lose State")
-@export var max_wrong_attempts : int = 5
 @export var max_time : float = 10.0
+@export var wrong_attempt_penalty : float = 1.0 # seconds
 var timer : float 
-var wrong_attempts : int = 0
 var has_lost : bool = false
 
 var move_input : Vector2 = Vector2.ZERO
@@ -43,6 +41,8 @@ func _ready():
 	victory_screen.visible = false
 	get_random_button()
 	max_frames = dirt_sprite.hframes * dirt_sprite.vframes
+	
+	if MusicManager.playing_fast == false: MusicManager.play_fast_song()
 
 func get_random_button():
 	desired_button = av_buttons.values().pick_random()
@@ -56,12 +56,11 @@ func _process(delta):
 	move_input = Input.get_vector("Left", "Right", "Up", "Down")
 	pan_sprite.global_position = move_input * offset_dist
 	
-	attempt_label.text = "Attempts Left: " + str(max_wrong_attempts - wrong_attempts)
 	
 	#for ticking
 	tick_timer += delta
 	if tick_timer >= interval:
-		AudioTools.PlayClip(timer_stream)
+		if AudioTools: AudioTools.PlayClip(timer_stream)
 		tick_timer = 0.0
 	
 	timer -= delta
@@ -96,12 +95,12 @@ func _input(event):
 			
 		else: #you pressed the wrong button
 			print("You pressed the wrong thang bucko")
-			wrong_attempts += 1
-			if wrong_attempts >= max_wrong_attempts:
+			timer -= wrong_attempt_penalty
+			if timer <= 0.0:
 				lose()
 				has_lost = true
 		
-		if sift_stream: AudioTools.PlayClip(sift_stream, 0.0, 1.0, true)
+		if sift_stream and AudioTools: AudioTools.PlayClip(sift_stream, 0.0, 1.0, true)
 		get_random_button()
 
 func button_tracker():
@@ -124,6 +123,7 @@ func button_tracker():
 	
 
 func win():
+	MusicManager.play_slow_song()
 	if victory_screen: victory_screen.visible = true
 
 func lose():

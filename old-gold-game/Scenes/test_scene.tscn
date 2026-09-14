@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ecjclnd0ubth"]
 
 [ext_resource type="Texture2D" uid="uid://cr05ws780ipit" path="res://Assets/Sprites/Pan.png" id="1_3dogw"]
-[ext_resource type="Script" uid="uid://d1ueyim0sbkvk" path="res://Scripts/Panner.gd" id="1_hb2xm"]
+[ext_resource type="Script" uid="uid://bwqxgv72c0wqv" path="res://Scripts/Panner.gd" id="1_hb2xm"]
 [ext_resource type="Texture2D" uid="uid://bl4hrkxoxsy0j" path="res://Assets/Sprites/GoldDuck.png" id="2_50ct6"]
 [ext_resource type="AudioStream" uid="uid://1ygue56pgetp" path="res://Assets/Audio/sift.wav" id="2_ak5v8"]
 [ext_resource type="Texture2D" uid="uid://bn20tg58gv518" path="res://Assets/Sprites/Dirt.png" id="2_r5l72"]
@@ -120,6 +120,7 @@ _data = {
 [node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("victory_screen")]
 script = ExtResource("1_hb2xm")
 victory_screen = NodePath("CanvasLayer/VictoryControl")
+max_time = 15.0
 sift_stream = ExtResource("2_ak5v8")
 timer_stream = ExtResource("3_x033f")
 
@@ -169,14 +170,6 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 68
 text = "PRESS UP"
 horizontal_alignment = 1
-
-[node name="AttemptLabel" type="Label" parent="CanvasLayer/Control" unique_id=856022922]
-layout_mode = 1
-offset_left = 44.0
-offset_right = 854.0
-offset_bottom = 161.0
-theme_override_font_sizes/font_size = 68
-text = "Attempts Left: 5"
 
 [node name="TimeLeft" type="Label" parent="CanvasLayer/Control" unique_id=1445693954]
 layout_mode = 1

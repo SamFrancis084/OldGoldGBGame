@@ -12,50 +12,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimHolder:size")
+tracks/0/path = NodePath("AnimHolder:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(40, 40)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimHolder:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(556, 354)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimHolder:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimHolder:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(60, 61)]
 }
 
 [sub_resource type="Animation" id="Animation_ak5v8"]
@@ -65,50 +29,14 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimHolder:size")
+tracks/0/path = NodePath("AnimHolder:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.9666667, 6),
+"times": PackedFloat32Array(0, 3, 6),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(40, 40), Vector2(40, 40), Vector2(40, 40)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimHolder:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.9666667, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(556, 354), Vector2(511, 377), Vector2(556, 354)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimHolder:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.9666667, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, -0.36660898, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimHolder:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2.9666667, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1.4589598, 1.4589598), Vector2(1, 1)]
+"values": [Vector2(60, 73), Vector2(60, 64), Vector2(60, 73)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x033f"]
@@ -117,28 +45,39 @@ _data = {
 &"victory_sway": SubResource("Animation_ak5v8")
 }
 
-[node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("victory_screen")]
+[node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("pan_sprite", "gold_sprite", "dirt_sprite", "victory_screen", "name_label", "shadow_label", "label", "time_left", "item_tr")]
 script = ExtResource("1_hb2xm")
+gold_follow_damp = 5.0
+dirt_follow_damp = 15.0
+pan_sprite = NodePath("PanSprite")
+gold_sprite = NodePath("GoldSprite")
+dirt_sprite = NodePath("DirtSprite")
 victory_screen = NodePath("CanvasLayer/VictoryControl")
 max_time = 15.0
 sift_stream = ExtResource("2_ak5v8")
 timer_stream = ExtResource("3_x033f")
+name_label = NodePath("CanvasLayer/VictoryControl/ItemNameLabel")
+shadow_label = NodePath("CanvasLayer/VictoryControl/ShadowLabel")
+label = NodePath("CanvasLayer/Control/ButtonLabel")
+time_left = NodePath("CanvasLayer/Control/TimeLeft")
+item_tr = NodePath("CanvasLayer/VictoryControl/AnimHolder/ItemTR")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=177339963]
+zoom = Vector2(0.2, 0.2)
 
 [node name="PanSprite" type="Sprite2D" parent="." unique_id=1524625846]
 texture_filter = 3
 scale = Vector2(6.03125, 6.031249)
 texture = ExtResource("1_3dogw")
 
-[node name="GoldSprite" type="Sprite2D" parent="PanSprite" unique_id=288017580]
+[node name="GoldSprite" type="Sprite2D" parent="." unique_id=288017580]
 texture_filter = 3
-scale = Vector2(0.4566474, 0.4566474)
+scale = Vector2(2.7541547, 2.7541542)
 texture = ExtResource("2_50ct6")
 
-[node name="DirtSprite" type="Sprite2D" parent="PanSprite" unique_id=499992845]
+[node name="DirtSprite" type="Sprite2D" parent="." unique_id=499992845]
 texture_filter = 3
-scale = Vector2(0.80346817, 0.80346817)
+scale = Vector2(4.845917, 4.8459167)
 texture = ExtResource("2_r5l72")
 hframes = 2
 vframes = 3
@@ -155,37 +94,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1860468028]
+[node name="ButtonLabel" type="Label" parent="CanvasLayer/Control" unique_id=1860468028]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -427.0
-offset_top = -100.0
-offset_right = 427.0
+offset_left = -50.0
+offset_top = -26.0
+offset_right = 50.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 68
+theme_override_font_sizes/font_size = 18
 text = "PRESS UP"
 horizontal_alignment = 1
 
 [node name="TimeLeft" type="Label" parent="CanvasLayer/Control" unique_id=1445693954]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -854.0
-offset_right = -65.0
-offset_bottom = 161.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 68
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_right = 75.0
+offset_bottom = 28.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 20
 text = "TIME: 10"
-horizontal_alignment = 2
+horizontal_alignment = 1
 
 [node name="VictoryControl" type="Control" parent="CanvasLayer" unique_id=1708991034]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -202,35 +140,33 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.69803923, 0.5764706, 0.34509805, 1)
 
-[node name="Label2" type="Label" parent="CanvasLayer/VictoryControl" unique_id=376424904]
+[node name="ItemNameLabel" type="Label" parent="CanvasLayer/VictoryControl" unique_id=376424904]
 self_modulate = Color(0.25882354, 0.1764706, 0.17254902, 1)
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -420.0
-offset_top = 53.0
-offset_right = 434.0
-offset_bottom = 214.0
+anchors_preset = -1
+anchor_left = 0.03125
+anchor_top = 0.027777778
+anchor_right = 0.96875
+anchor_bottom = 0.3263889
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 96
+theme_override_font_sizes/font_size = 24
 text = "Uncovered!"
 horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer/VictoryControl" unique_id=967821298]
+[node name="ShadowLabel" type="Label" parent="CanvasLayer/VictoryControl" unique_id=967821298]
 self_modulate = Color(1, 0.9529412, 0.6784314, 1)
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -427.0
-offset_top = 53.0
-offset_right = 427.0
-offset_bottom = 214.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.2986111
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 96
+theme_override_font_sizes/font_size = 24
 text = "Uncovered!"
 horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimHolder" type="Control" parent="CanvasLayer/VictoryControl" unique_id=1596455529]
 layout_mode = 1
@@ -240,19 +176,26 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = 30.0
+offset_top = -11.0
 offset_right = 20.0
-offset_bottom = 70.0
+offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VictoryControl/AnimHolder" unique_id=933031104]
+[node name="ItemTR" type="TextureRect" parent="CanvasLayer/VictoryControl/AnimHolder" unique_id=933031104]
 texture_filter = 3
-layout_mode = 0
-offset_left = -131.0
-offset_top = -131.0
-offset_right = 195.0
-offset_bottom = 195.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -38.0
+offset_right = 38.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_50ct6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/VictoryControl" unique_id=1569265770]

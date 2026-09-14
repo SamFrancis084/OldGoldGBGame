@@ -12,4 +12,4 @@ func give_item(index : int) -> Item:
 func give_random_item() -> Item:
 	if item_list.size() <= 0: return
 	
-	return item_list[randi_range(0, item_list.size())]
+	return item_list[randi_range(0, item_list.size() - 1)]

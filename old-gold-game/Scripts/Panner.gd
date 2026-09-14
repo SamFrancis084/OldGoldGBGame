@@ -1,14 +1,18 @@
 extends Node2D
 
+var current_item : Item
+
 @export var offset_dist : float = 100.0
 var start_pos : Vector2 = Vector2.ZERO
 
-@onready var pan_sprite : Sprite2D = $PanSprite
-@onready var gold_sprite : Sprite2D = $PanSprite/GoldSprite
-@onready var dirt_sprite = $PanSprite/DirtSprite
+@export var gold_follow_damp : float = 1.0
+@export var dirt_follow_damp : float = 1.0
 
-@onready var label : Label = $CanvasLayer/Control/Label
-@onready var time_left = $CanvasLayer/Control/TimeLeft
+@export_category("Sprites")
+@export var pan_sprite : Sprite2D
+@export var gold_sprite : Sprite2D
+@export var dirt_sprite : Sprite2D
+
 
 
 enum av_buttons {LEFT, RIGHT, UP, DOWN} #can add other buttons
@@ -35,8 +39,19 @@ var move_input : Vector2 = Vector2.ZERO
 var interval : float = 1.0
 var tick_timer : float = 0.0
 
+@export_category("UI")
+@export var name_label : Label
+@export var shadow_label : Label
+@export var label : Label
+@export var time_left : Label
+@export var item_tr : TextureRect
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#testing
+	current_item = ItemHolder.give_random_item()
+	gold_sprite.texture = current_item.sprite
+	
 	timer = max_time
 	victory_screen.visible = false
 	get_random_button()
@@ -56,6 +71,9 @@ func _process(delta):
 	move_input = Input.get_vector("Left", "Right", "Up", "Down")
 	pan_sprite.global_position = move_input * offset_dist
 	
+	#have dirt and gold follow pan at different speeds
+	gold_sprite.global_position = gold_sprite.global_position.move_toward(pan_sprite.global_position, gold_follow_damp)
+	dirt_sprite.global_position = dirt_sprite.global_position.move_toward(pan_sprite.global_position, dirt_follow_damp)
 	
 	#for ticking
 	tick_timer += delta
@@ -124,6 +142,10 @@ func button_tracker():
 
 func win():
 	MusicManager.play_slow_song()
+	if item_tr: item_tr.texture = current_item.sprite
+	name_label.text = "You uncovered " +  current_item.item_name + "!"
+	shadow_label.text = name_label.text
+	
 	if victory_screen: victory_screen.visible = true
 
 func lose():

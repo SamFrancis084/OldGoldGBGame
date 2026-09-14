@@ -1,0 +1,17 @@
+#this script will have a bunch of helper functions in it
+extends Node
+
+var is_fs : bool = false
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if Input.is_action_just_pressed("Restart"): get_tree().reload_current_scene()
+	
+	if Input.is_action_just_pressed("Fullscreen"): toggle_fullscreen()
+
+func toggle_fullscreen():
+	is_fs = !is_fs
+	if is_fs:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

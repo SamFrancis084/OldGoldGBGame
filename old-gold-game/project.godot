@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 AudioTools="*uid://dkin74l1ulm0b"
 
+[display]
+
+window/size/viewport_width=160
+window/size/viewport_height=144
+
 [input]
 
 Left={

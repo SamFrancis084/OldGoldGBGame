@@ -1,5 +1,7 @@
 extends Node2D
 
+var current_item : Item
+
 @export var offset_dist : float = 100.0
 var start_pos : Vector2 = Vector2.ZERO
 
@@ -9,6 +11,7 @@ var start_pos : Vector2 = Vector2.ZERO
 
 @onready var label : Label = $CanvasLayer/Control/Label
 @onready var time_left = $CanvasLayer/Control/TimeLeft
+@onready var item_tr = $CanvasLayer/VictoryControl/AnimHolder/ItemTR
 
 
 enum av_buttons {LEFT, RIGHT, UP, DOWN} #can add other buttons
@@ -35,8 +38,16 @@ var move_input : Vector2 = Vector2.ZERO
 var interval : float = 1.0
 var tick_timer : float = 0.0
 
+@export_category("UI")
+@export var name_label : Label
+@export var shadow_label : Label
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#testing
+	current_item = ItemHolder.give_random_item()
+	gold_sprite.texture = current_item.sprite
+	
 	timer = max_time
 	victory_screen.visible = false
 	get_random_button()
@@ -124,6 +135,10 @@ func button_tracker():
 
 func win():
 	MusicManager.play_slow_song()
+	if item_tr: item_tr.texture = current_item.sprite
+	name_label.text = "You uncovered " +  current_item.item_name + "!"
+	shadow_label.text = name_label.text
+	
 	if victory_screen: victory_screen.visible = true
 
 func lose():

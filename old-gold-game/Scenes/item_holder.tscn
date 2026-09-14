@@ -1,6 +1,37 @@
 [gd_scene format=3 uid="uid://jabx7ccopf3c"]
 
 [ext_resource type="Script" uid="uid://bb3rpe5hj1ani" path="res://Scripts/item_holder.gd" id="1_w482a"]
+[ext_resource type="Script" uid="uid://ct4stocjou76b" path="res://Scripts/Item.gd" id="2_y5niy"]
+[ext_resource type="Texture2D" uid="uid://cs2ruvh752r3d" path="res://Assets/Sprites/Test-1.png" id="3_enkfh"]
+[ext_resource type="Texture2D" uid="uid://c035fsfqrwklv" path="res://Assets/Sprites/Test-2.png" id="4_1prth"]
+[ext_resource type="Texture2D" uid="uid://crb31uo0t7td3" path="res://Assets/Sprites/Test-3.png" id="5_nud32"]
+[ext_resource type="Texture2D" uid="uid://b8kf1fndc5xrd" path="res://Assets/Sprites/Test-4.png" id="6_f8jq6"]
+[ext_resource type="Resource" uid="uid://ci5tib8m7llp6" path="res://Assets/Items/TestItem.tres" id="7_enkfh"]
+
+[sub_resource type="Resource" id="Resource_upqjx"]
+script = ExtResource("2_y5niy")
+item_name = "t"
+sprite = ExtResource("3_enkfh")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_6r5ca"]
+script = ExtResource("2_y5niy")
+item_name = "e"
+sprite = ExtResource("4_1prth")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_anlvf"]
+script = ExtResource("2_y5niy")
+item_name = "s"
+sprite = ExtResource("5_nud32")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_kye5y"]
+script = ExtResource("2_y5niy")
+item_name = "t2"
+sprite = ExtResource("6_f8jq6")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
 
 [node name="ItemHolder" type="Node" unique_id=1263430781]
 script = ExtResource("1_w482a")
+item_list = Array[ExtResource("2_y5niy")]([SubResource("Resource_upqjx"), SubResource("Resource_6r5ca"), SubResource("Resource_anlvf"), SubResource("Resource_kye5y"), ExtResource("7_enkfh")])

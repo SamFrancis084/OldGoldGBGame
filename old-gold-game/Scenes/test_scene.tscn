@@ -117,12 +117,14 @@ _data = {
 &"victory_sway": SubResource("Animation_ak5v8")
 }
 
-[node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("victory_screen")]
+[node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("victory_screen", "name_label", "shadow_label")]
 script = ExtResource("1_hb2xm")
 victory_screen = NodePath("CanvasLayer/VictoryControl")
 max_time = 15.0
 sift_stream = ExtResource("2_ak5v8")
 timer_stream = ExtResource("3_x033f")
+name_label = NodePath("CanvasLayer/VictoryControl/ItemNameLabel")
+shadow_label = NodePath("CanvasLayer/VictoryControl/ShadowLabel")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=177339963]
 
@@ -185,7 +187,6 @@ text = "TIME: 10"
 horizontal_alignment = 2
 
 [node name="VictoryControl" type="Control" parent="CanvasLayer" unique_id=1708991034]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -202,7 +203,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.69803923, 0.5764706, 0.34509805, 1)
 
-[node name="Label2" type="Label" parent="CanvasLayer/VictoryControl" unique_id=376424904]
+[node name="ItemNameLabel" type="Label" parent="CanvasLayer/VictoryControl" unique_id=376424904]
 self_modulate = Color(0.25882354, 0.1764706, 0.17254902, 1)
 layout_mode = 1
 anchors_preset = 5
@@ -216,8 +217,9 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 96
 text = "Uncovered!"
 horizontal_alignment = 1
+autowrap_mode = 3
 
-[node name="Label" type="Label" parent="CanvasLayer/VictoryControl" unique_id=967821298]
+[node name="ShadowLabel" type="Label" parent="CanvasLayer/VictoryControl" unique_id=967821298]
 self_modulate = Color(1, 0.9529412, 0.6784314, 1)
 layout_mode = 1
 anchors_preset = 5
@@ -231,6 +233,7 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 96
 text = "Uncovered!"
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="AnimHolder" type="Control" parent="CanvasLayer/VictoryControl" unique_id=1596455529]
 layout_mode = 1
@@ -246,7 +249,7 @@ offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VictoryControl/AnimHolder" unique_id=933031104]
+[node name="ItemTR" type="TextureRect" parent="CanvasLayer/VictoryControl/AnimHolder" unique_id=933031104]
 texture_filter = 3
 layout_mode = 0
 offset_left = -131.0

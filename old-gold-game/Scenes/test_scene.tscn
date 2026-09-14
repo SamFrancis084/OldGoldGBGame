@@ -117,14 +117,22 @@ _data = {
 &"victory_sway": SubResource("Animation_ak5v8")
 }
 
-[node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("victory_screen", "name_label", "shadow_label")]
+[node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("pan_sprite", "gold_sprite", "dirt_sprite", "victory_screen", "name_label", "shadow_label", "label", "time_left", "item_tr")]
 script = ExtResource("1_hb2xm")
+gold_follow_damp = 5.0
+dirt_follow_damp = 15.0
+pan_sprite = NodePath("PanSprite")
+gold_sprite = NodePath("GoldSprite")
+dirt_sprite = NodePath("DirtSprite")
 victory_screen = NodePath("CanvasLayer/VictoryControl")
 max_time = 15.0
 sift_stream = ExtResource("2_ak5v8")
 timer_stream = ExtResource("3_x033f")
 name_label = NodePath("CanvasLayer/VictoryControl/ItemNameLabel")
 shadow_label = NodePath("CanvasLayer/VictoryControl/ShadowLabel")
+label = NodePath("CanvasLayer/Control/ButtonLabel")
+time_left = NodePath("CanvasLayer/Control/TimeLeft")
+item_tr = NodePath("CanvasLayer/VictoryControl/AnimHolder/ItemTR")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=177339963]
 
@@ -133,14 +141,14 @@ texture_filter = 3
 scale = Vector2(6.03125, 6.031249)
 texture = ExtResource("1_3dogw")
 
-[node name="GoldSprite" type="Sprite2D" parent="PanSprite" unique_id=288017580]
+[node name="GoldSprite" type="Sprite2D" parent="." unique_id=288017580]
 texture_filter = 3
-scale = Vector2(0.4566474, 0.4566474)
+scale = Vector2(2.7541547, 2.7541542)
 texture = ExtResource("2_50ct6")
 
-[node name="DirtSprite" type="Sprite2D" parent="PanSprite" unique_id=499992845]
+[node name="DirtSprite" type="Sprite2D" parent="." unique_id=499992845]
 texture_filter = 3
-scale = Vector2(0.80346817, 0.80346817)
+scale = Vector2(4.845917, 4.8459167)
 texture = ExtResource("2_r5l72")
 hframes = 2
 vframes = 3
@@ -157,7 +165,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1860468028]
+[node name="ButtonLabel" type="Label" parent="CanvasLayer/Control" unique_id=1860468028]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5

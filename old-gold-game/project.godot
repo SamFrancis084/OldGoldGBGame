@@ -21,11 +21,6 @@ AudioTools="*uid://b88n6jrqkofqc"
 ItemHolder="*uid://jabx7ccopf3c"
 MusicManager="*uid://bydgyakpcx7og"
 
-[display]
-
-window/size/viewport_width=160
-window/size/viewport_height=144
-
 [input]
 
 Left={

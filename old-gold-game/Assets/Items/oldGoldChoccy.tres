@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://b8k6lnr3le1mi"]
+
+[ext_resource type="Script" uid="uid://ct4stocjou76b" path="res://Scripts/Item.gd" id="1_gg1i3"]
+[ext_resource type="Texture2D" uid="uid://b1noyrmortf6q" path="res://Assets/Sprites/old gold choccy.png" id="2_oka8c"]
+
+[resource]
+script = ExtResource("1_gg1i3")
+item_name = "Old Gold Choccy"
+sprite = ExtResource("2_oka8c")
+metadata/_custom_type_script = "uid://ct4stocjou76b"

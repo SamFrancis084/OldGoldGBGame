@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://2mqm7ctu36kv"]
+
+[ext_resource type="Script" uid="uid://ct4stocjou76b" path="res://Scripts/Item.gd" id="1_8rr1b"]
+[ext_resource type="Texture2D" uid="uid://bmo0r1qiei45u" path="res://Assets/Sprites/suspicious coin.png" id="2_o4rad"]
+
+[resource]
+script = ExtResource("1_8rr1b")
+item_name = "Suspisious Coin"
+sprite = ExtResource("2_o4rad")
+metadata/_custom_type_script = "uid://ct4stocjou76b"

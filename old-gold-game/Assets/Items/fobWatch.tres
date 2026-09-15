@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://d4cou6n8r06m8"]
+
+[ext_resource type="Script" uid="uid://ct4stocjou76b" path="res://Scripts/Item.gd" id="1_hk1l8"]
+[ext_resource type="Texture2D" uid="uid://dbgtkkyh7rpse" path="res://Assets/Sprites/fob watch.png" id="2_ax2ev"]
+
+[resource]
+script = ExtResource("1_hk1l8")
+item_name = "Old Fob"
+sprite = ExtResource("2_ax2ev")
+metadata/_custom_type_script = "uid://ct4stocjou76b"

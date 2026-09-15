@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_m3yto")
-item_name = "Golden Duck"
+item_name = "Gold Duck"
 sprite = ExtResource("2_4xs6r")
 metadata/_custom_type_script = "uid://ct4stocjou76b"

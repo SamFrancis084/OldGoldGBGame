@@ -8,20 +8,21 @@ var moving = false
 var input_dir
 
 func _physics_process(delta: float) -> void:
+	
 	input_dir = Vector2.ZERO
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("Down"):
 		input_dir = Vector2(0,1)
 		animSprite.play("walk_down")
 		move()
-	elif Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("Up"):
 		input_dir = Vector2(0,-1)
 		animSprite.play("walk_up")
 		move()
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("Right"):
 		input_dir = Vector2(1,0)
 		animSprite.play("walk_right")
 		move()
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("Left"):
 		input_dir = Vector2(-1,0)
 		animSprite.play("walk_left")
 		move()
@@ -32,10 +33,10 @@ func move():
 	if input_dir:
 		if moving == false:
 			moving == true
-			var tween = create_tween()
-			tween.tween_property(self, "position", position + input_dir*tileSize, animSPD)
+			#var tween = create_tween()
+			#tween.tween_property(self, "position", position + input_dir*tileSize, animSPD)
 			
-			tween.tween_callback(move_false)
+			#tween.tween_callback(move_false)
 
 func move_false():
 	moving = false

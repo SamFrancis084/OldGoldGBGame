@@ -145,6 +145,7 @@ size = Vector2(19, 29)
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=537363910]
 position = Vector2(-1, 1)
+collision_layer = 2
 script = ExtResource("1_cqoxo")
 SPD = 5000
 tileSize = 16
@@ -156,6 +157,5 @@ sprite_frames = SubResource("SpriteFrames_giie4")
 animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=514228860]
-visible = false
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_cqoxo")

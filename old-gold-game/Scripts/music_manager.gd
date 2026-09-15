@@ -6,7 +6,8 @@ extends AudioStreamPlayer
 var playing_slow : bool = false
 var playing_fast : bool = false 
 
-
+func _ready():
+	if not playing: play_slow_song()
 
 func play_slow_song():
 	stop()

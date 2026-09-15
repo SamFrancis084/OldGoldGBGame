@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bc0fn8uflceuh"]
 
-[ext_resource type="PackedScene" uid="uid://de6yo5xh7r861" path="res://Scenes/player movement.tscn" id="1_ksef8"]
-[ext_resource type="PackedScene" uid="uid://cma8iw5di3y1j" path="res://Scenes/hotspot.tscn" id="2_shcxh"]
+[ext_resource type="PackedScene" path="res://Scenes/player movement.tscn" id="1_ksef8"]
+[ext_resource type="PackedScene" path="res://Scenes/hotspot.tscn" id="2_shcxh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shcxh"]
 size = Vector2(20, 157)

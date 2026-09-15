@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cma8iw5di3y1j"]
+[gd_scene format=3 uid="uid://hheaaq1pw4ws"]
 
 [ext_resource type="Texture2D" uid="uid://dbuejks0ja8wq" path="res://Assets/Sprites/Cross.png" id="1_1f2so"]
-[ext_resource type="Script" uid="uid://d3fqctnb3p51t" path="res://Scripts/hotspot.gd" id="1_36n5v"]
+[ext_resource type="Script" path="res://Scripts/hotspot.gd" id="1_36n5v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_36n5v"]
 radius = 15.033297

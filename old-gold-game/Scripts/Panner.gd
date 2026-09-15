@@ -149,4 +149,5 @@ func win():
 	if victory_screen: victory_screen.visible = true
 
 func lose():
+	MusicManager.play_slow_song()
 	SceneManager.go_to_main()

@@ -33,10 +33,10 @@ func move():
 	if input_dir:
 		if moving == false:
 			moving == true
-			var tween = create_tween()
-			tween.tween_property(self, "position", position + input_dir*tileSize, animSPD)
+			#var tween = create_tween()
+			#tween.tween_property(self, "position", position + input_dir*tileSize, animSPD)
 			
-			tween.tween_callback(move_false)
+			#tween.tween_callback(move_false)
 
 func move_false():
 	moving = false

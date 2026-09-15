@@ -145,6 +145,7 @@ size = Vector2(19, 29)
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=537363910]
 position = Vector2(-1, 1)
+collision_layer = 2
 script = ExtResource("1_cqoxo")
 SPD = 5000
 tileSize = 16

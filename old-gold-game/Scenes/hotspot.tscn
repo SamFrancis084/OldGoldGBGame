@@ -1,17 +1,28 @@
 [gd_scene format=3 uid="uid://cma8iw5di3y1j"]
 
 [ext_resource type="Texture2D" uid="uid://dbuejks0ja8wq" path="res://Assets/Sprites/Cross.png" id="1_1f2so"]
+[ext_resource type="Script" uid="uid://d3fqctnb3p51t" path="res://Scripts/hotspot.gd" id="1_36n5v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_36n5v"]
-radius = 34.058773
+radius = 15.033297
 
 [node name="Hotspot" type="Node2D" unique_id=1218814196]
+script = ExtResource("1_36n5v")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1599395670]
 texture_filter = 3
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_1f2so")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1090511199]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=6986986]
 shape = SubResource("CircleShape2D_36n5v")
+
+[node name="TeleTimer" type="Timer" parent="." unique_id=1390456170]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="TeleTimer" to="." method="_on_tele_timer_timeout"]

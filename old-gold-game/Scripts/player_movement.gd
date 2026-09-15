@@ -8,6 +8,7 @@ var moving = false
 var input_dir
 
 func _physics_process(delta: float) -> void:
+	
 	input_dir = Vector2.ZERO
 	if Input.is_action_pressed("Down"):
 		input_dir = Vector2(0,1)

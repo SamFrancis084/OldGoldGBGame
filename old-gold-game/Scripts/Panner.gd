@@ -92,7 +92,7 @@ func _input(event):
 	
 	if has_won or has_lost:
 		if event.is_pressed() and not event.is_echo():
-			get_tree().reload_current_scene() # go back to walking around
+			SceneManager.go_to_main() # go back to walking around
 		
 		return
 	
@@ -149,4 +149,4 @@ func win():
 	if victory_screen: victory_screen.visible = true
 
 func lose():
-	get_tree().reload_current_scene()
+	SceneManager.go_to_main()

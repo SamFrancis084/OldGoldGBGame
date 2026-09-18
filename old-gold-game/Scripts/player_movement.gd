@@ -33,9 +33,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func move(delta):
+	step_timer -= delta
 	if input_dir:
 		#audio
-		step_timer -= delta
+		
 		if step_timer <= 0.0:
 			AudioTools.PlayClip(step_clip, -10, 1, true)
 			step_timer = step_rate

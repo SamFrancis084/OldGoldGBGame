@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://jeni1go0bsvq" path="res://Assets/Audio/timer.wav" id="3_x033f"]
 [ext_resource type="Texture2D" uid="uid://p24buj3wy5vj" path="res://Assets/Sprites/NewPan.png" id="4_x033f"]
 [ext_resource type="Texture2D" uid="uid://3d2654ij61of" path="res://Assets/Sprites/Dirt-Sheet-106x109px.png" id="6_x033f"]
+[ext_resource type="Texture2D" uid="uid://bbion6lugbmi" path="res://Assets/Sprites/Arrows.png" id="7_rdbpf"]
 
 [sub_resource type="Animation" id="Animation_hb2xm"]
 length = 0.001
@@ -45,7 +46,7 @@ _data = {
 &"victory_sway": SubResource("Animation_ak5v8")
 }
 
-[node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("pan_sprite", "gold_sprite", "dirt_sprite", "victory_screen", "name_label", "shadow_label", "label", "time_left", "item_tr")]
+[node name="TestScene" type="Node2D" unique_id=1618907069 node_paths=PackedStringArray("pan_sprite", "gold_sprite", "dirt_sprite", "victory_screen", "arrow_sprite", "name_label", "shadow_label", "label", "time_left", "item_tr")]
 script = ExtResource("1_hb2xm")
 gold_follow_damp = 5.0
 dirt_follow_damp = 15.0
@@ -57,6 +58,8 @@ victory_screen = NodePath("CanvasLayer/VictoryControl")
 max_time = 15.0
 sift_stream = ExtResource("2_ak5v8")
 timer_stream = ExtResource("3_x033f")
+using_arrows = true
+arrow_sprite = NodePath("ArrowSprite2D")
 name_label = NodePath("CanvasLayer/VictoryControl/ItemNameLabel")
 shadow_label = NodePath("CanvasLayer/VictoryControl/ShadowLabel")
 label = NodePath("CanvasLayer/Control/ButtonLabel")
@@ -83,6 +86,15 @@ texture = ExtResource("6_x033f")
 hframes = 3
 region_rect = Rect2(0, 0, 106, 109)
 
+[node name="ArrowSprite2D" type="Sprite2D" parent="." unique_id=687829540]
+z_index = 1
+texture_filter = 3
+position = Vector2(0, 279)
+scale = Vector2(3.7499998, 3.75)
+texture = ExtResource("7_rdbpf")
+hframes = 2
+vframes = 2
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1753702141]
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=761072809]
@@ -94,6 +106,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ButtonLabel" type="Label" parent="CanvasLayer/Control" unique_id=1860468028]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -123,6 +136,7 @@ text = "TIME: 10"
 horizontal_alignment = 1
 
 [node name="VictoryControl" type="Control" parent="CanvasLayer" unique_id=1708991034]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

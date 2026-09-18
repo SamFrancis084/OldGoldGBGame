@@ -20,7 +20,7 @@ var desired_button : av_buttons
 var desired_string : String = "" #this has to match the input names
 
 var times_shaken : int = 0 # for testing
-var times_to_shake : int = 3
+@export var times_to_shake : int = 3
 var max_frames : int = 0
 var has_won : bool = false
 @export var victory_screen : Control

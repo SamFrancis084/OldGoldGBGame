@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://ecjclnd0ubth"]
 
-[ext_resource type="Texture2D" uid="uid://cr05ws780ipit" path="res://Assets/Sprites/Pan.png" id="1_3dogw"]
 [ext_resource type="Script" uid="uid://bwqxgv72c0wqv" path="res://Scripts/Panner.gd" id="1_hb2xm"]
 [ext_resource type="Texture2D" uid="uid://bl4hrkxoxsy0j" path="res://Assets/Sprites/GoldDuck.png" id="2_50ct6"]
 [ext_resource type="AudioStream" uid="uid://1ygue56pgetp" path="res://Assets/Audio/sift.wav" id="2_ak5v8"]
-[ext_resource type="Texture2D" uid="uid://bn20tg58gv518" path="res://Assets/Sprites/Dirt.png" id="2_r5l72"]
 [ext_resource type="AudioStream" uid="uid://jeni1go0bsvq" path="res://Assets/Audio/timer.wav" id="3_x033f"]
+[ext_resource type="Texture2D" uid="uid://p24buj3wy5vj" path="res://Assets/Sprites/NewPan.png" id="4_x033f"]
+[ext_resource type="Texture2D" uid="uid://3d2654ij61of" path="res://Assets/Sprites/Dirt-Sheet-106x109px.png" id="6_x033f"]
 
 [sub_resource type="Animation" id="Animation_hb2xm"]
 length = 0.001
@@ -52,6 +52,7 @@ dirt_follow_damp = 15.0
 pan_sprite = NodePath("PanSprite")
 gold_sprite = NodePath("GoldSprite")
 dirt_sprite = NodePath("DirtSprite")
+times_to_shake = 5
 victory_screen = NodePath("CanvasLayer/VictoryControl")
 max_time = 15.0
 sift_stream = ExtResource("2_ak5v8")
@@ -67,8 +68,8 @@ zoom = Vector2(0.2, 0.2)
 
 [node name="PanSprite" type="Sprite2D" parent="." unique_id=1524625846]
 texture_filter = 3
-scale = Vector2(6.03125, 6.031249)
-texture = ExtResource("1_3dogw")
+scale = Vector2(2.4722228, 2.472222)
+texture = ExtResource("4_x033f")
 
 [node name="GoldSprite" type="Sprite2D" parent="." unique_id=288017580]
 texture_filter = 3
@@ -77,12 +78,10 @@ texture = ExtResource("2_50ct6")
 
 [node name="DirtSprite" type="Sprite2D" parent="." unique_id=499992845]
 texture_filter = 3
-scale = Vector2(4.845917, 4.8459167)
-texture = ExtResource("2_r5l72")
-hframes = 2
-vframes = 3
-region_enabled = true
-region_rect = Rect2(0, 0, 128, 192)
+scale = Vector2(2.45283, 2.4528294)
+texture = ExtResource("6_x033f")
+hframes = 3
+region_rect = Rect2(0, 0, 106, 109)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1753702141]
 

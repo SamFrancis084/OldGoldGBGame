@@ -2,6 +2,64 @@
 
 [ext_resource type="Texture2D" uid="uid://dbuejks0ja8wq" path="res://Assets/Sprites/Cross.png" id="1_1f2so"]
 [ext_resource type="Script" path="res://Scripts/hotspot.gd" id="1_36n5v"]
+[ext_resource type="Texture2D" uid="uid://cvdqroc0mwnot" path="res://Assets/Sprites/star_anim.png" id="3_q2wo8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylbxt"]
+atlas = ExtResource("3_q2wo8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu18t"]
+atlas = ExtResource("3_q2wo8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow8j8"]
+atlas = ExtResource("3_q2wo8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56c70"]
+atlas = ExtResource("3_q2wo8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgaie"]
+atlas = ExtResource("3_q2wo8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucv0f"]
+atlas = ExtResource("3_q2wo8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4t8s"]
+atlas = ExtResource("3_q2wo8")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r1ahi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylbxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qu18t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow8j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56c70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgaie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucv0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4t8s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_36n5v"]
 radius = 15.033297
@@ -9,7 +67,17 @@ radius = 15.033297
 [node name="Hotspot" type="Node2D" unique_id=1218814196]
 script = ExtResource("1_36n5v")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1221837707]
+z_index = -1
+texture_filter = 3
+scale = Vector2(1.6875001, 1.6875001)
+sprite_frames = SubResource("SpriteFrames_r1ahi")
+autoplay = "default"
+frame_progress = 0.21768093
+speed_scale = 3.0
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1599395670]
+visible = false
 z_index = -1
 texture_filter = 3
 scale = Vector2(0.5, 0.5)

@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bc0fn8uflceuh"]
 
-[ext_resource type="PackedScene" path="res://Scenes/player movement.tscn" id="1_ksef8"]
-[ext_resource type="PackedScene" path="res://Scenes/hotspot.tscn" id="2_shcxh"]
+[ext_resource type="PackedScene" uid="uid://35vtxokflop4" path="res://Scenes/player movement.tscn" id="1_ksef8"]
+[ext_resource type="PackedScene" uid="uid://hheaaq1pw4ws" path="res://Scenes/hotspot.tscn" id="2_shcxh"]
+[ext_resource type="PackedScene" uid="uid://c68sxf6vvirsx" path="res://Scenes/score_ui.tscn" id="3_nkb5k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shcxh"]
 size = Vector2(20, 157)
@@ -37,3 +38,7 @@ shape = SubResource("RectangleShape2D_nkb5k")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Bounds/StaticBody2D" unique_id=268759391]
 position = Vector2(81, -8)
 shape = SubResource("RectangleShape2D_nkb5k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1976954684]
+
+[node name="ScoreUi" parent="CanvasLayer" unique_id=2015588002 instance=ExtResource("3_nkb5k")]

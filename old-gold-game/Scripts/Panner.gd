@@ -20,7 +20,7 @@ var desired_button : av_buttons
 var desired_string : String = "" #this has to match the input names
 
 var times_shaken : int = 0 # for testing
-var times_to_shake : int = 3
+@export var times_to_shake : int = 3
 var max_frames : int = 0
 var has_won : bool = false
 @export var victory_screen : Control
@@ -40,6 +40,8 @@ var interval : float = 1.0
 var tick_timer : float = 0.0
 
 @export_category("UI")
+@export var using_arrows : bool = false
+@export var arrow_sprite : Sprite2D
 @export var name_label : Label
 @export var shadow_label : Label
 @export var label : Label
@@ -51,6 +53,9 @@ func _ready():
 	#testing
 	current_item = ItemHolder.give_random_item()
 	gold_sprite.texture = current_item.sprite
+	
+	arrow_sprite.visible = using_arrows
+	label.visible = !using_arrows
 	
 	timer = max_time
 	victory_screen.visible = false
@@ -93,10 +98,11 @@ func _input(event):
 	if has_won or has_lost:
 		if event.is_pressed() and not event.is_echo():
 			SceneManager.go_to_main() # go back to walking around
-		
 		return
 	
-	if event.is_pressed() and not event.is_echo():
+	var legal_buttons_pressed = Input.is_action_just_pressed("Down") or Input.is_action_just_pressed("Up") or Input.is_action_just_pressed("Right") or Input.is_action_just_pressed("Left")
+	
+	if legal_buttons_pressed and not event.is_echo():
 		if Input.is_action_just_pressed(desired_string):
 			times_shaken += 1
 			
@@ -124,23 +130,36 @@ func _input(event):
 func button_tracker():
 	match desired_button:
 		av_buttons.LEFT:
-			label.text = "PRESS LEFT"
+			if using_arrows:
+				arrow_sprite.frame = 1
+			else:
+				label.text = "PRESS LEFT"
 			desired_string = "Left"
 		
 		av_buttons.RIGHT:
-			label.text = "PRESS RIGHT"
+			if using_arrows:
+				arrow_sprite.frame = 3
+			else:
+				label.text = "PRESS RIGHT"
 			desired_string = "Right"
 		
 		av_buttons.UP:
-			label.text = "PRESS UP"
+			if using_arrows:
+				arrow_sprite.frame = 0
+			else:
+				label.text = "PRESS UP"
 			desired_string = "Up"
 		
 		av_buttons.DOWN:
-			label.text = "PRESS DOWN"
+			if using_arrows:
+				arrow_sprite.frame = 2
+			else:
+				label.text = "PRESS DOWN"
 			desired_string = "Down"
 	
 
 func win():
+	PlayerScore.current_score += 100
 	MusicManager.play_slow_song()
 	if item_tr: item_tr.texture = current_item.sprite
 	name_label.text = "You uncovered " +  current_item.item_name + "!"

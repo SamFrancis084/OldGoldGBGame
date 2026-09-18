@@ -159,6 +159,7 @@ func button_tracker():
 	
 
 func win():
+	PlayerScore.current_score += 100
 	MusicManager.play_slow_song()
 	if item_tr: item_tr.texture = current_item.sprite
 	name_label.text = "You uncovered " +  current_item.item_name + "!"

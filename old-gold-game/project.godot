@@ -22,6 +22,7 @@ ItemHolder="*uid://jabx7ccopf3c"
 MusicManager="*uid://bydgyakpcx7og"
 GameManager="*uid://bwse30dt1s0w3"
 SceneManager="*uid://pki77hulb4re"
+PlayerScore="*uid://c2nq4wt4x8cpp"
 
 [display]
 

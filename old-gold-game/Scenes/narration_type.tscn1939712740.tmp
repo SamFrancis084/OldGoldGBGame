@@ -11,14 +11,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nev3o")
 typeSPD = 0.5
-string_array = Array[String](["one", "two", "three", "four"])
+typed_array = ["Hark, all ye panners of gold", "For the time hath come upon us once more", "Golden streams spread across this blessed land", "So go forth, oh ye panners of gold"]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1043121985]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 39.0
-offset_right = 148.0
-offset_bottom = 85.0
+offset_left = 14.0
+offset_top = 61.0
+offset_right = 152.0
+offset_bottom = 77.0
 theme_override_font_sizes/normal_font_size = 9
+text = "Hark, all ye panners of gold"
 visible_characters = 0
 visible_ratio = 0.0

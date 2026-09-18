@@ -98,10 +98,11 @@ func _input(event):
 	if has_won or has_lost:
 		if event.is_pressed() and not event.is_echo():
 			SceneManager.go_to_main() # go back to walking around
-		
 		return
 	
-	if event.is_pressed() and not event.is_echo():
+	var legal_buttons_pressed = Input.is_action_just_pressed("Down") or Input.is_action_just_pressed("Up") or Input.is_action_just_pressed("Right") or Input.is_action_just_pressed("Left")
+	
+	if legal_buttons_pressed and not event.is_echo():
 		if Input.is_action_just_pressed(desired_string):
 			times_shaken += 1
 			

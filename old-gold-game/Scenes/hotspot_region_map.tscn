@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ynbjg8rx1xd7"]
+
+[ext_resource type="Texture2D" uid="uid://dbuejks0ja8wq" path="res://Assets/Sprites/Cross.png" id="1_dvg3j"]
+[ext_resource type="Script" uid="uid://bthvv3s2nyb35" path="res://Scripts/hotspot_region_map.gd" id="2_5x7os"]
+[ext_resource type="PackedScene" uid="uid://hheaaq1pw4ws" path="res://Scenes/hotspot.tscn" id="3_5ih43"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5x7os"]
+texture = ExtResource("1_dvg3j")
+texture_region_size = Vector2i(12, 12)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5ih43"]
+sources/0 = SubResource("TileSetAtlasSource_5x7os")
+
+[node name="HotspotRegionMap" type="TileMapLayer" unique_id=1842569713]
+texture_filter = 3
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_5ih43")
+rendering_quadrant_size = 12
+physics_quadrant_size = 12
+script = ExtResource("2_5x7os")
+hotspot = ExtResource("3_5ih43")

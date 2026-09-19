@@ -65,6 +65,7 @@ animations = [{
 radius = 15.033297
 
 [node name="Hotspot" type="Node2D" unique_id=1218814196]
+z_index = 2
 script = ExtResource("1_36n5v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1221837707]
@@ -90,8 +91,5 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=6986986]
 shape = SubResource("CircleShape2D_36n5v")
 
-[node name="TeleTimer" type="Timer" parent="." unique_id=1390456170]
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="TeleTimer" to="." method="_on_tele_timer_timeout"]

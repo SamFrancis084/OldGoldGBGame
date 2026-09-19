@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbuejks0ja8wq"
-path="res://.godot/imported/Cross.png-a35d7d54d47ceec63c1f7d015bd7540a.ctex"
+uid="uid://48usye2olr85"
+path="res://.godot/imported/Dirt-Sheet-64x64px.png-8d1938ccaee8198af01e710f7706a00c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cross.png"
-dest_files=["res://.godot/imported/Cross.png-a35d7d54d47ceec63c1f7d015bd7540a.ctex"]
+source_file="res://Assets/Sprites/Dirt-Sheet-64x64px.png"
+dest_files=["res://.godot/imported/Dirt-Sheet-64x64px.png-8d1938ccaee8198af01e710f7706a00c.ctex"]
 
 [params]
 
@@ -36,5 +36,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=12
+process/size_limit=0
 detect_3d/compress_to=1

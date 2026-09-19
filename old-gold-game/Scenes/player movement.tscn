@@ -140,7 +140,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqoxo"]
-size = Vector2(19, 29)
+size = Vector2(16, 5)
 
 [node name="player movement" type="Node2D" unique_id=27736371]
 
@@ -159,5 +159,12 @@ sprite_frames = SubResource("SpriteFrames_giie4")
 animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=514228860]
-position = Vector2(0.5, 0.5)
+position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_cqoxo")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1486405084]
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 144
+limit_smoothed = true

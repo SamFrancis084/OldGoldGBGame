@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctv5tv0s1vnm6"
-path="res://.godot/imported/Tree2.png-509050891d7b52fdc6c13cd7b583aff2.ctex"
+uid="uid://dehhu361wiupm"
+path="res://.godot/imported/MergedAtlas.png-1cb1f867e688a8c43089057a9ed83fc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/TilemapBS/Tree2.png"
-dest_files=["res://.godot/imported/Tree2.png-509050891d7b52fdc6c13cd7b583aff2.ctex"]
+source_file="res://Assets/Sprites/TilemapBS/MergedAtlas.png"
+dest_files=["res://.godot/imported/MergedAtlas.png-1cb1f867e688a8c43089057a9ed83fc9.ctex"]
 
 [params]
 

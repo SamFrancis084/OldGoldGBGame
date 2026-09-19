@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://duwgvca03v000"]
+[gd_scene format=4 uid="uid://duwgvca03v000"]
 
 [ext_resource type="Texture2D" uid="uid://bk4h38ktj7pk4" path="res://Assets/Sprites/Map.png" id="1_ci6au"]
+[ext_resource type="TileSet" uid="uid://chy5bbgd1t3x1" path="res://Assets/Sprites/TilemapBS/Rocks.tres" id="2_p3ir5"]
+[ext_resource type="TileSet" uid="uid://cpspbu55y3nd7" path="res://Assets/Sprites/TilemapBS/GrassShrubsTreest.tres" id="3_myvm1"]
+[ext_resource type="PackedScene" uid="uid://35vtxokflop4" path="res://Scenes/player movement.tscn" id="11_dlo4w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yn8b"]
 atlas = ExtResource("1_ci6au")
@@ -63,14 +66,42 @@ animations = [{
 }],
 "loop": true,
 "name": &"Map",
-"speed": 3.0
+"speed": 3.33
 }]
 
 [node name="Map" type="Node2D" unique_id=981795463]
+y_sort_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1412497518]
 texture_filter = 1
 position = Vector2(480, 72)
 sprite_frames = SubResource("SpriteFrames_xicox")
 animation = &"Map"
-frame_progress = 0.30045378
+autoplay = "Map"
+frame_progress = 0.63012666
+
+[node name="RocksToWalkOn" type="TileMapLayer" parent="." unique_id=76175658]
+y_sort_enabled = true
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAOAAcAAAAIAAAAAAAWAAgAAAADAAUAAAAUAAQAAAADAAMAAAAUAAUAAAADAAMAAAAZAAcAAAAGAAAAAAA=")
+tile_set = ExtResource("2_p3ir5")
+
+[node name="RocksWithCollisions" type="TileMapLayer" parent="." unique_id=120562058]
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAGAAcAAAAAAAAAAAAFAAYAAAACAAAAAAA=")
+tile_set = ExtResource("2_p3ir5")
+
+[node name="GrassShrubsTreesRocks" type="TileMapLayer" parent="." unique_id=1062596559]
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAEAAIACgAAAAMAAAABAAQACgAAAAMAAAAMAAMACgAAAAMAAAAWAAIACgAAAAMAAAAXAAMACgAAAAMAAAAWAAQACgAAAAMAAAAUAAMACgAAAAMAAAAJAAkACgAAAAQAAAAUAAEACgAAAAQAAAAJAAAACgAAAAQAAAASAAMACgAAAAEAAAARAAQACgAAAAEAAAAZAAMACgAAAAEAAAAaAAEACgAAAAEAAAAKAAQACgAAAAEAAAACAAYACgAAAAEAAAAKAAoACgAAAAcAAAAIAAoACgAAAAcAAAAJAAsACgAAAAcAAAANAAMACgAAAAcAAAATAAMACgAAAAcAAAAYAAIACgAAAAcAAAAAAAQACgAAAAcAAAALAAgACgAAAAkAAAANAAoACgAAAAkAAAAFAAoACgAAAAkAAAABAAoACgAAAAkAAAASAAoACgAAAAkAAAAQAAsACgAAAAkAAAATAAsACgAAAAcAAAAUAAkACgAAAAcAAAAQAAkACgAAAAcAAAAOAAgACgAAAAcAAAAOAAsACgAAAAMAAAALAAsACgAAAAMAAAARAAsACgAAAAMAAAAVAAsACgAAAAMAAAAPAAkACgAAAAMAAAAHAAoACgAAAAMAAAAEAAsACgAAAAMAAAABAAsACgAAAAMAAAA=")
+tile_set = ExtResource("3_myvm1")
+
+[node name="player movement" parent="." unique_id=27736371 instance=ExtResource("11_dlo4w")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(96, 34)
+scale = Vector2(0.5, 0.5)

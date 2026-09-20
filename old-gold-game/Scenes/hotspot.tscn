@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://hheaaq1pw4ws"]
 
-[ext_resource type="Texture2D" uid="uid://dbuejks0ja8wq" path="res://Assets/Sprites/Cross.png" id="1_1f2so"]
 [ext_resource type="Script" uid="uid://d3fqctnb3p51t" path="res://Scripts/hotspot.gd" id="1_36n5v"]
 [ext_resource type="Texture2D" uid="uid://cvdqroc0mwnot" path="res://Assets/Sprites/star_anim.png" id="3_q2wo8"]
+[ext_resource type="Texture2D" uid="uid://cyexg4jtgwa6y" path="res://Assets/Sprites/eprmpt.png" id="3_ylbxt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ylbxt"]
 atlas = ExtResource("3_q2wo8")
@@ -62,7 +62,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_36n5v"]
-radius = 15.033297
+radius = 10.049875
 
 [node name="Hotspot" type="Node2D" unique_id=1218814196]
 z_index = 2
@@ -77,12 +77,12 @@ autoplay = "default"
 frame_progress = 0.21768093
 speed_scale = 3.0
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1599395670]
-visible = false
+[node name="PromptSprite" type="Sprite2D" parent="." unique_id=1599395670]
 z_index = -1
 texture_filter = 3
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_1f2so")
+position = Vector2(0, -17)
+scale = Vector2(1.1666666, 1.1666666)
+texture = ExtResource("3_ylbxt")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1090511199]
 collision_layer = 4

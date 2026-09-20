@@ -8,6 +8,7 @@ var moving = false
 var input_dir
 
 @export_category("Audio") #footsteps
+@export var fs_volume : float = -10.0
 @export var default_step : AudioStream
 @export var rock_step : AudioStream
 @export var water_step : AudioStream
@@ -74,7 +75,7 @@ func footstep_audio(delta):
 	step_timer -= delta
 	if input_dir:
 		if step_timer <= 0.0:
-			AudioTools.PlayClip(step_clip, 0, 1, true)
+			AudioTools.PlayClip(step_clip, fs_volume, 1, true)
 			step_timer = step_rate
 
 func move_false():

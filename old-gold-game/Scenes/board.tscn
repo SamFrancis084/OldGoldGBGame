@@ -1,0 +1,262 @@
+[gd_scene format=3 uid="uid://fhou3loxumnf"]
+
+[ext_resource type="Script" uid="uid://bp1srhygl4u8x" path="res://Scripts/board.gd" id="1_tnbny"]
+[ext_resource type="Shader" uid="uid://w3o8gtw23fyv" path="res://Assets/Shaders/SilhoutteSprite.gdshader" id="2_shhme"]
+[ext_resource type="Texture2D" uid="uid://bud7q6ldvbaar" path="res://Assets/Sprites/waterTile.png" id="3_s4i1f"]
+[ext_resource type="Texture2D" uid="uid://dmls700ktcc6m" path="res://Assets/Sprites/cigs.png" id="4_bh37u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_twe5h"]
+shader = ExtResource("2_shhme")
+shader_parameter/active = true
+shader_parameter/tint = Color(7.2196127e-07, 0.3169257, 0.36351717, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d8vyx"]
+shader = ExtResource("2_shhme")
+shader_parameter/active = false
+shader_parameter/tint = Color(0.054, 0.026, 0.025, 1)
+
+[node name="Board" type="Node2D" unique_id=1157778481 node_paths=PackedStringArray("sprite_array")]
+script = ExtResource("1_tnbny")
+sprite_array = [NodePath("ItemHolder/BG01/ItemSprite01"), NodePath("ItemHolder/BG02/ItemSprite01"), NodePath("ItemHolder/BG03/ItemSprite01"), NodePath("ItemHolder/BG04/ItemSprite01"), NodePath("ItemHolder/BG05/ItemSprite01"), NodePath("ItemHolder/BG06/ItemSprite01"), NodePath("ItemHolder/BG07/ItemSprite01"), NodePath("ItemHolder/BG08/ItemSprite01"), NodePath("ItemHolder/BG09/ItemSprite01"), NodePath("ItemHolder/BG10/ItemSprite01"), NodePath("ItemHolder/BG11/ItemSprite01"), NodePath("ItemHolder/BG12/ItemSprite01"), NodePath("ItemHolder/BG13/ItemSprite01"), NodePath("ItemHolder/BG14/ItemSprite01"), NodePath("ItemHolder/BG15/ItemSprite01"), NodePath("ItemHolder/BG16/ItemSprite01"), NodePath("ItemHolder/BG17/ItemSprite01"), NodePath("ItemHolder/BG18/ItemSprite01"), NodePath("ItemHolder/BG19/ItemSprite01"), NodePath("ItemHolder/BG20/ItemSprite01")]
+
+[node name="ItemHolder" type="Node2D" parent="." unique_id=1925338773]
+position = Vector2(53, 51)
+
+[node name="BG01" type="Sprite2D" parent="ItemHolder" unique_id=2067170156]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG01" unique_id=95817926]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG02" type="Sprite2D" parent="ItemHolder" unique_id=48032763]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(16, 0)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG02" unique_id=1076999285]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG03" type="Sprite2D" parent="ItemHolder" unique_id=1373400552]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(32, 0)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG03" unique_id=2021136385]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG04" type="Sprite2D" parent="ItemHolder" unique_id=1472873593]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(48, 0)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG04" unique_id=487328085]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG05" type="Sprite2D" parent="ItemHolder" unique_id=1902172551]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(64, 0)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG05" unique_id=237496702]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG06" type="Sprite2D" parent="ItemHolder" unique_id=2127267307]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(0, 14)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG06" unique_id=1003897830]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG07" type="Sprite2D" parent="ItemHolder" unique_id=1392082941]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(16, 14)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG07" unique_id=128916841]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG08" type="Sprite2D" parent="ItemHolder" unique_id=1301221130]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(32, 14)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG08" unique_id=14389160]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG09" type="Sprite2D" parent="ItemHolder" unique_id=554131406]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(48, 14)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG09" unique_id=1226630952]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG10" type="Sprite2D" parent="ItemHolder" unique_id=2020773494]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(64, 14)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG10" unique_id=1443875474]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG11" type="Sprite2D" parent="ItemHolder" unique_id=437352676]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(0, 30)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG11" unique_id=884109882]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG12" type="Sprite2D" parent="ItemHolder" unique_id=635309100]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(16, 30)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG12" unique_id=274017649]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG13" type="Sprite2D" parent="ItemHolder" unique_id=889128548]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(32, 30)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG13" unique_id=268209790]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG14" type="Sprite2D" parent="ItemHolder" unique_id=1447975903]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(48, 30)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG14" unique_id=203499324]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG15" type="Sprite2D" parent="ItemHolder" unique_id=1313786640]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(64, 30)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG15" unique_id=1338679705]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG16" type="Sprite2D" parent="ItemHolder" unique_id=736495729]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(0, 46)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG16" unique_id=645169430]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG17" type="Sprite2D" parent="ItemHolder" unique_id=312124579]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(16, 46)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG17" unique_id=1870977075]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG18" type="Sprite2D" parent="ItemHolder" unique_id=469176677]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(32, 46)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG18" unique_id=1348988180]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG19" type="Sprite2D" parent="ItemHolder" unique_id=212937224]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(48, 46)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG19" unique_id=386335241]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")
+
+[node name="BG20" type="Sprite2D" parent="ItemHolder" unique_id=2078319535]
+texture_filter = 3
+material = SubResource("ShaderMaterial_twe5h")
+position = Vector2(64, 46)
+texture = ExtResource("3_s4i1f")
+
+[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG20" unique_id=1311809816]
+texture_filter = 3
+material = SubResource("ShaderMaterial_d8vyx")
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("4_bh37u")

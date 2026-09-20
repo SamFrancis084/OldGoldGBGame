@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://vn7wepuk6i6n" path="res://Assets/Sprites/gold ring.png" id="4_enkfh"]
 [ext_resource type="Texture2D" uid="uid://b1noyrmortf6q" path="res://Assets/Sprites/old gold choccy.png" id="5_1prth"]
 [ext_resource type="Texture2D" uid="uid://bmo0r1qiei45u" path="res://Assets/Sprites/suspicious coin.png" id="6_nud32"]
-[ext_resource type="Texture2D" uid="uid://cfbs352ohvi7h" path="res://Assets/Sprites/golden delisious worm.png" id="7_enkfh"]
+[ext_resource type="Texture2D" uid="uid://diyqr5vjr8h2w" path="res://Assets/Sprites/golden delish.png" id="7_upqjx"]
 [ext_resource type="Texture2D" uid="uid://x4grtxyanar0" path="res://Assets/Sprites/badge.png" id="8_upqjx"]
 [ext_resource type="Texture2D" uid="uid://dmls700ktcc6m" path="res://Assets/Sprites/cigs.png" id="9_6r5ca"]
 [ext_resource type="Texture2D" uid="uid://dipcogttq7gr6" path="res://Assets/Sprites/fish.png" id="10_anlvf"]
@@ -26,7 +26,7 @@ metadata/_custom_type_script = "uid://ct4stocjou76b"
 
 [sub_resource type="Resource" id="Resource_6r5ca"]
 script = ExtResource("2_y5niy")
-item_name = "Chocolate"
+item_name = "Old Gold Chocolate"
 sprite = ExtResource("5_1prth")
 metadata/_custom_type_script = "uid://ct4stocjou76b"
 
@@ -38,8 +38,8 @@ metadata/_custom_type_script = "uid://ct4stocjou76b"
 
 [sub_resource type="Resource" id="Resource_1prth"]
 script = ExtResource("2_y5niy")
-item_name = "Four Apples"
-sprite = ExtResource("7_enkfh")
+item_name = "Golden Delicious"
+sprite = ExtResource("7_upqjx")
 metadata/_custom_type_script = "uid://ct4stocjou76b"
 
 [sub_resource type="Resource" id="Resource_c3ggt"]

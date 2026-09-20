@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3fqctnb3p51t" path="res://Scripts/hotspot.gd" id="1_36n5v"]
 [ext_resource type="Texture2D" uid="uid://cvdqroc0mwnot" path="res://Assets/Sprites/star_anim.png" id="3_q2wo8"]
-[ext_resource type="Texture2D" uid="uid://cyexg4jtgwa6y" path="res://Assets/Sprites/eprmpt.png" id="3_ylbxt"]
+[ext_resource type="FontFile" uid="uid://388i3owm2jfr" path="res://Assets/Fonts/8-bit-operator/8bitOperatorPlus8-Bold.ttf" id="3_ylbxt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ylbxt"]
 atlas = ExtResource("3_q2wo8")
@@ -80,9 +80,18 @@ speed_scale = 3.0
 [node name="PromptSprite" type="Sprite2D" parent="." unique_id=1599395670]
 z_index = -1
 texture_filter = 3
-position = Vector2(0, -17)
-scale = Vector2(1.1666666, 1.1666666)
-texture = ExtResource("3_ylbxt")
+position = Vector2(0, -12)
+scale = Vector2(0.5, 0.4999999)
+
+[node name="Label" type="Label" parent="PromptSprite" unique_id=1671210260]
+offset_left = -6.0
+offset_top = -6.0000014
+offset_right = 34.0
+offset_bottom = 16.999998
+theme_override_colors/font_color = Color(1, 0.9529412, 0.6784314, 1)
+theme_override_colors/font_shadow_color = Color(0.25882354, 0.1764706, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("3_ylbxt")
+text = "E"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1090511199]
 collision_layer = 4

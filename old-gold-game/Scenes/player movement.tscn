@@ -147,7 +147,7 @@ size = Vector2(16, 5)
 [node name="player movement" type="CharacterBody2D" unique_id=537363910]
 collision_layer = 2
 script = ExtResource("1_cqoxo")
-SPD = 5000
+SPD = 3000
 tileSize = 16
 animSPD = 0.15
 default_step = ExtResource("2_5llcl")

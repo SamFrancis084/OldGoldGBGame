@@ -11,6 +11,17 @@
 [ext_resource type="Texture2D" uid="uid://dmls700ktcc6m" path="res://Assets/Sprites/cigs.png" id="9_6r5ca"]
 [ext_resource type="Texture2D" uid="uid://dipcogttq7gr6" path="res://Assets/Sprites/fish.png" id="10_anlvf"]
 [ext_resource type="Texture2D" uid="uid://dwxi6kn2eb6fh" path="res://Assets/Sprites/goldenDuck.png" id="11_kye5y"]
+[ext_resource type="Texture2D" uid="uid://cr2q8n54iymm4" path="res://Assets/Sprites/Bottle.png" id="12_gy3wl"]
+[ext_resource type="Texture2D" uid="uid://b4lqv68h8mklf" path="res://Assets/Sprites/GoldenCircleJuice.png" id="13_g5edr"]
+[ext_resource type="Texture2D" uid="uid://d1jyj7hnk5b36" path="res://Assets/Sprites/GoldenCurry.png" id="14_y0x3l"]
+[ext_resource type="Texture2D" uid="uid://cjn1nqpv4bpmp" path="res://Assets/Sprites/GoldenEgg.png" id="15_d5xc6"]
+[ext_resource type="Texture2D" uid="uid://s2slb2hm0wh5" path="res://Assets/Sprites/GoldenGateBridge.png" id="16_v3r2h"]
+[ext_resource type="Texture2D" uid="uid://c78fxc56s600b" path="res://Assets/Sprites/GoldenGaytime.png" id="17_y7ssn"]
+[ext_resource type="Texture2D" uid="uid://ca6i5swunfiet" path="res://Assets/Sprites/GoldenGlobeAward.png" id="18_cijbj"]
+[ext_resource type="Texture2D" uid="uid://cqlkhdn28sk5w" path="res://Assets/Sprites/GoldmanSachsJob.png" id="19_psggc"]
+[ext_resource type="Texture2D" uid="uid://covo7xnhgy8uq" path="res://Assets/Sprites/Marigold.png" id="20_nv7d3"]
+[ext_resource type="Texture2D" uid="uid://bpn73fey222by" path="res://Assets/Sprites/PokemonGold.png" id="21_gdlar"]
+[ext_resource type="Texture2D" uid="uid://c61578rp5bjww" path="res://Assets/Sprites/XXXXGold.png" id="22_d1jcv"]
 
 [sub_resource type="Resource" id="Resource_f8jq6"]
 script = ExtResource("2_y5niy")
@@ -66,6 +77,72 @@ item_name = "Rubber Duck"
 sprite = ExtResource("11_kye5y")
 metadata/_custom_type_script = "uid://ct4stocjou76b"
 
+[sub_resource type="Resource" id="Resource_w0x3l"]
+script = ExtResource("2_y5niy")
+item_name = "Bottle-o-somethin"
+sprite = ExtResource("12_gy3wl")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_o8hg3"]
+script = ExtResource("2_y5niy")
+item_name = "Golden Circle Juice"
+sprite = ExtResource("13_g5edr")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_wabs8"]
+script = ExtResource("2_y5niy")
+item_name = "Golden Curry"
+sprite = ExtResource("14_y0x3l")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_km45j"]
+script = ExtResource("2_y5niy")
+item_name = "Golden Egg"
+sprite = ExtResource("15_d5xc6")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_d6qjy"]
+script = ExtResource("2_y5niy")
+item_name = "The Golden Gate Bridge"
+sprite = ExtResource("16_v3r2h")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_dpmjg"]
+script = ExtResource("2_y5niy")
+item_name = "Golden Gaytime"
+sprite = ExtResource("17_y7ssn")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_jkx5l"]
+script = ExtResource("2_y5niy")
+item_name = "Golden Globe Award"
+sprite = ExtResource("18_cijbj")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_e2g85"]
+script = ExtResource("2_y5niy")
+item_name = "Goldman Sachs Employment"
+sprite = ExtResource("19_psggc")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_tbyxa"]
+script = ExtResource("2_y5niy")
+item_name = "Marigold Flower"
+sprite = ExtResource("20_nv7d3")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_ngqey"]
+script = ExtResource("2_y5niy")
+item_name = "Pokemon Gold"
+sprite = ExtResource("21_gdlar")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_s06pe"]
+script = ExtResource("2_y5niy")
+item_name = "XXXX Gold Beer"
+sprite = ExtResource("22_d1jcv")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
 [node name="ItemHolder" type="Node" unique_id=1263430781]
 script = ExtResource("1_w482a")
-item_list = Array[ExtResource("2_y5niy")]([SubResource("Resource_f8jq6"), SubResource("Resource_upqjx"), SubResource("Resource_6r5ca"), SubResource("Resource_anlvf"), SubResource("Resource_1prth"), SubResource("Resource_c3ggt"), SubResource("Resource_sujlx"), SubResource("Resource_w1gvh"), SubResource("Resource_nk1ye")])
+item_list = Array[ExtResource("2_y5niy")]([SubResource("Resource_f8jq6"), SubResource("Resource_upqjx"), SubResource("Resource_6r5ca"), SubResource("Resource_anlvf"), SubResource("Resource_1prth"), SubResource("Resource_c3ggt"), SubResource("Resource_sujlx"), SubResource("Resource_w1gvh"), SubResource("Resource_nk1ye"), SubResource("Resource_w0x3l"), SubResource("Resource_o8hg3"), SubResource("Resource_wabs8"), SubResource("Resource_km45j"), SubResource("Resource_d6qjy"), SubResource("Resource_dpmjg"), SubResource("Resource_jkx5l"), SubResource("Resource_e2g85"), SubResource("Resource_tbyxa"), SubResource("Resource_ngqey"), SubResource("Resource_s06pe")])

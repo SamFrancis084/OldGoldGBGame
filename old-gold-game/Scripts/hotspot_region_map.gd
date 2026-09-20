@@ -24,7 +24,7 @@ func spawn_hotspots():
 	for i in range(hotspot_count):
 		#spawn hotspot
 		var new_hs = hotspot.instantiate()
-		get_tree().current_scene.add_child.call_deferred(new_hs)
+		get_parent().add_child.call_deferred(new_hs)
 		hotspots.append(new_hs)
 		
 		#give initial position

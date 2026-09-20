@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bk4h38ktj7pk4" path="res://Assets/Sprites/Map.png" id="1_ci6au"]
 [ext_resource type="TileSet" uid="uid://chy5bbgd1t3x1" path="res://Assets/Sprites/TilemapBS/Rocks.tres" id="2_p3ir5"]
 [ext_resource type="TileSet" uid="uid://cpspbu55y3nd7" path="res://Assets/Sprites/TilemapBS/GrassShrubsTreest.tres" id="3_myvm1"]
-[ext_resource type="PackedScene" uid="uid://fhou3loxumnf" path="res://Scenes/board.tscn" id="5_q0mm3"]
+[ext_resource type="PackedScene" uid="uid://ckx0nxsr2gugd" path="res://Scenes/board.tscn" id="5_q0mm3"]
 [ext_resource type="PackedScene" uid="uid://35vtxokflop4" path="res://Scenes/player movement.tscn" id="11_dlo4w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yn8b"]
@@ -103,11 +103,11 @@ tile_map_data = PackedByteArray("AAABAAQACgAAAAMAAAAWAAIACgAAAAMAAAAXAAMACgAAAAM
 tile_set = ExtResource("3_myvm1")
 
 [node name="player movement" parent="." unique_id=27736371 instance=ExtResource("11_dlo4w")]
-z_index = 2
+z_index = 3
 y_sort_enabled = true
 position = Vector2(78, 80)
 scale = Vector2(0.5, 0.5)
 
 [node name="Board" parent="." unique_id=1157778481 instance=ExtResource("5_q0mm3")]
-z_index = 2
-position = Vector2(87, 18)
+z_index = 3
+position = Vector2(86, 5)

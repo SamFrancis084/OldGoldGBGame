@@ -21,6 +21,11 @@ var rock_id : int = 0
 var water_id : int = 1
 var previous_id : int = -1
 
+func _ready():
+	#set player to where they started panning
+	if GameManager.last_pos:
+		global_position = GameManager.last_pos
+
 func _physics_process(delta: float) -> void:
 	
 	input_dir = Vector2.ZERO

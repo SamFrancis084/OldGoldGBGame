@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://fhou3loxumnf"]
+[gd_scene format=3 uid="uid://ckx0nxsr2gugd"]
 
-[ext_resource type="Script" uid="uid://bp1srhygl4u8x" path="res://Scripts/board.gd" id="1_tnbny"]
+[ext_resource type="Script" uid="uid://bwomnc80n3h2u" path="res://Scripts/board.gd" id="1_tnbny"]
 [ext_resource type="Texture2D" uid="uid://dnf3jru0gvivu" path="res://Assets/Sprites/DisplayBoard.png" id="2_s4i1f"]
 [ext_resource type="Shader" uid="uid://w3o8gtw23fyv" path="res://Assets/Shaders/SilhoutteSprite.gdshader" id="2_shhme"]
 [ext_resource type="Texture2D" uid="uid://bud7q6ldvbaar" path="res://Assets/Sprites/waterTile.png" id="3_s4i1f"]
@@ -17,263 +17,268 @@ shader_parameter/active = false
 shader_parameter/tint = Color(0.25882354, 0.1764706, 0.17254902, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4i1f"]
-size = Vector2(60.04893, 37.678925)
+size = Vector2(60.04893, 8)
 
 [node name="Board" type="StaticBody2D" unique_id=2001719410 node_paths=PackedStringArray("sprite_array")]
+y_sort_enabled = true
 collision_mask = 2
 script = ExtResource("1_tnbny")
-sprite_array = [NodePath("ItemHolder/BG01/ItemSprite01"), NodePath("ItemHolder/BG02/ItemSprite01"), NodePath("ItemHolder/BG03/ItemSprite01"), NodePath("ItemHolder/BG04/ItemSprite01"), NodePath("ItemHolder/BG05/ItemSprite01"), NodePath("ItemHolder/BG06/ItemSprite01"), NodePath("ItemHolder/BG07/ItemSprite01"), NodePath("ItemHolder/BG08/ItemSprite01"), NodePath("ItemHolder/BG09/ItemSprite01"), NodePath("ItemHolder/BG10/ItemSprite01"), NodePath("ItemHolder/BG11/ItemSprite01"), NodePath("ItemHolder/BG12/ItemSprite01"), NodePath("ItemHolder/BG13/ItemSprite01"), NodePath("ItemHolder/BG14/ItemSprite01"), NodePath("ItemHolder/BG15/ItemSprite01"), NodePath("ItemHolder/BG16/ItemSprite01"), NodePath("ItemHolder/BG17/ItemSprite01"), NodePath("ItemHolder/BG18/ItemSprite01"), NodePath("ItemHolder/BG19/ItemSprite01"), NodePath("ItemHolder/BG20/ItemSprite01")]
+sprite_array = [NodePath("BoardOrigin/ItemHolder/BG01/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG02/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG03/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG04/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG05/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG06/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG07/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG08/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG09/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG10/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG11/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG12/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG13/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG14/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG15/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG16/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG17/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG18/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG19/ItemSprite01"), NodePath("BoardOrigin/ItemHolder/BG20/ItemSprite01")]
 
-[node name="DisplayBoard" type="Sprite2D" parent="." unique_id=1687740688]
+[node name="BoardOrigin" type="Node2D" parent="." unique_id=838890864]
+position = Vector2(0, 36)
+
+[node name="DisplayBoard" type="Sprite2D" parent="BoardOrigin" unique_id=1687740688]
+y_sort_enabled = true
 texture_filter = 1
-position = Vector2(30, 20)
+position = Vector2(30, -16)
 texture = ExtResource("2_s4i1f")
 
-[node name="ItemHolder" type="Node2D" parent="." unique_id=1925338773]
-position = Vector2(11.9611225, 5)
+[node name="ItemHolder" type="Node2D" parent="BoardOrigin" unique_id=1925338773]
+position = Vector2(32, 4)
 scale = Vector2(0.59, 0.59)
 
-[node name="BG01" type="Sprite2D" parent="ItemHolder" unique_id=2067170156]
+[node name="BG01" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=2067170156]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(-2.4206579, 0.8286684)
+position = Vector2(-36.384857, -58.49337)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG01" unique_id=95817926]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG01" unique_id=95817926]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG02" type="Sprite2D" parent="ItemHolder" unique_id=48032763]
+[node name="BG02" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=48032763]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(14.542786, 0.80557346)
+position = Vector2(-19.421413, -58.516464)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG02" unique_id=1076999285]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG02" unique_id=1076999285]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG03" type="Sprite2D" parent="ItemHolder" unique_id=1373400552]
+[node name="BG03" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=1373400552]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(31.427938, 0.88)
+position = Vector2(-2.5362625, -58.44204)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG03" unique_id=2021136385]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG03" unique_id=2021136385]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG04" type="Sprite2D" parent="ItemHolder" unique_id=1472873593]
+[node name="BG04" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=1472873593]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(48.359997, 0.89)
+position = Vector2(14.395798, -58.432037)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG04" unique_id=487328085]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG04" unique_id=487328085]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 position = Vector2(-0.11467369, 0)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG05" type="Sprite2D" parent="ItemHolder" unique_id=1902172551]
+[node name="BG05" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=1902172551]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(65.34519, 0.9)
+position = Vector2(31.380997, -58.42204)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG05" unique_id=237496702]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG05" unique_id=237496702]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG06" type="Sprite2D" parent="ItemHolder" unique_id=2127267307]
+[node name="BG06" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=2127267307]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(-2.5180457, 14.465462)
+position = Vector2(-36.482246, -44.856575)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG06" unique_id=1003897830]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG06" unique_id=1003897830]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG07" type="Sprite2D" parent="ItemHolder" unique_id=1392082941]
+[node name="BG07" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=1392082941]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(14.510462, 14.470462)
+position = Vector2(-19.45374, -44.851578)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG07" unique_id=128916841]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG07" unique_id=128916841]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG08" type="Sprite2D" parent="ItemHolder" unique_id=1301221130]
+[node name="BG08" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=1301221130]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(31.439014, 14.440461)
+position = Vector2(-2.5251884, -44.881577)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG08" unique_id=14389160]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG08" unique_id=14389160]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG09" type="Sprite2D" parent="ItemHolder" unique_id=554131406]
+[node name="BG09" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=554131406]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(48.42462, 14.449462)
+position = Vector2(14.460419, -44.872578)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG09" unique_id=1226630952]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG09" unique_id=1226630952]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG10" type="Sprite2D" parent="ItemHolder" unique_id=2020773494]
+[node name="BG10" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=2020773494]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(65.36827, 14.470462)
+position = Vector2(31.404076, -44.851578)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG10" unique_id=1443875474]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG10" unique_id=1443875474]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG11" type="Sprite2D" parent="ItemHolder" unique_id=437352676]
+[node name="BG11" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=437352676]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(-2.4221392, 27.93497)
+position = Vector2(-36.386337, -31.38707)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG11" unique_id=884109882]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG11" unique_id=884109882]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG12" type="Sprite2D" parent="ItemHolder" unique_id=635309100]
+[node name="BG12" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=635309100]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(14.510458, 27.945116)
+position = Vector2(-19.45374, -31.376923)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG12" unique_id=274017649]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG12" unique_id=274017649]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG13" type="Sprite2D" parent="ItemHolder" unique_id=889128548]
+[node name="BG13" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=889128548]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(31.354906, 27.970922)
+position = Vector2(-2.609295, -31.351116)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG13" unique_id=268209790]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG13" unique_id=268209790]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG14" type="Sprite2D" parent="ItemHolder" unique_id=1447975903]
+[node name="BG14" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=1447975903]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(48.33971, 27.959015)
+position = Vector2(14.375511, -31.363026)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG14" unique_id=203499324]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG14" unique_id=203499324]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG15" type="Sprite2D" parent="ItemHolder" unique_id=1313786640]
+[node name="BG15" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=1313786640]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(65.332306, 27.996881)
+position = Vector2(31.368103, -31.325157)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG15" unique_id=1338679705]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG15" unique_id=1338679705]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG16" type="Sprite2D" parent="ItemHolder" unique_id=736495729]
+[node name="BG16" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=736495729]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(-2.412139, 41.48353)
+position = Vector2(-36.37634, -17.838512)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG16" unique_id=645169430]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG16" unique_id=645169430]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG17" type="Sprite2D" parent="ItemHolder" unique_id=312124579]
+[node name="BG17" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=312124579]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(14.558326, 41.463528)
+position = Vector2(-19.405876, -17.858513)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG17" unique_id=1870977075]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG17" unique_id=1870977075]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG18" type="Sprite2D" parent="ItemHolder" unique_id=469176677]
+[node name="BG18" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=469176677]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(31.444973, 41.485573)
+position = Vector2(-2.519226, -17.836468)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG18" unique_id=1348988180]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG18" unique_id=1348988180]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG19" type="Sprite2D" parent="ItemHolder" unique_id=212937224]
+[node name="BG19" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=212937224]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(48.43567, 41.587627)
+position = Vector2(14.471466, -17.734413)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG19" unique_id=386335241]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG19" unique_id=386335241]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
-[node name="BG20" type="Sprite2D" parent="ItemHolder" unique_id=2078319535]
+[node name="BG20" type="Sprite2D" parent="BoardOrigin/ItemHolder" unique_id=2078319535]
 texture_filter = 3
 material = SubResource("ShaderMaterial_twe5h")
-position = Vector2(65.384224, 41.463528)
+position = Vector2(31.420021, -17.858513)
 texture = ExtResource("3_s4i1f")
 
-[node name="ItemSprite01" type="Sprite2D" parent="ItemHolder/BG20" unique_id=1311809816]
+[node name="ItemSprite01" type="Sprite2D" parent="BoardOrigin/ItemHolder/BG20" unique_id=1311809816]
 texture_filter = 3
 material = SubResource("ShaderMaterial_d8vyx")
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("4_bh37u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1378421312]
-position = Vector2(29.997202, 21.078749)
+position = Vector2(29.997202, 36)
 shape = SubResource("RectangleShape2D_s4i1f")

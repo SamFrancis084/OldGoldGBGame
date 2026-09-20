@@ -13,6 +13,7 @@ func _process(delta):
 	prompt_sprite.visible = player_inside
 
 func _on_area_2d_body_entered(body):
+	GameManager.last_pos = body.global_position
 	player_inside = true
 
 func _on_area_2d_body_exited(body):

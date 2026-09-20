@@ -8,7 +8,7 @@ func _ready():
 
 func init_board():
 	if sprite_array and sprite_array.size() > 0:
-		for i in range(sprite_array.size() - 1):
+		for i in range(sprite_array.size()):
 			if ItemHolder.item_list.size() > i and ItemHolder.item_list[i]:
 				var item = ItemHolder.item_list[i]
 				var tex = item.sprite

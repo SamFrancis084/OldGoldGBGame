@@ -16,7 +16,7 @@ func init_board():
 				
 				#do silhoutte stuff
 				var mat : ShaderMaterial = sprite_array[i].material
-				mat.set_shader_parameter("active", ItemHolder.item_list[i].unlocked)
+				mat.set_shader_parameter("active", !ItemHolder.item_list[i].unlocked)
 			else:
 				sprite_array[i].texture = null
 

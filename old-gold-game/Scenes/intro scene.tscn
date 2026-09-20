@@ -140,6 +140,7 @@ text = "Muuaaah"
 horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=194367954]
+texture_filter = 1
 position = Vector2(78, 195)
 texture = ExtResource("2_a1mdr")
 

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bk4h38ktj7pk4" path="res://Assets/Sprites/Map.png" id="1_ci6au"]
 [ext_resource type="TileSet" uid="uid://chy5bbgd1t3x1" path="res://Assets/Sprites/TilemapBS/Rocks.tres" id="2_p3ir5"]
 [ext_resource type="TileSet" uid="uid://cpspbu55y3nd7" path="res://Assets/Sprites/TilemapBS/GrassShrubsTreest.tres" id="3_myvm1"]
-[ext_resource type="PackedScene" uid="uid://fhou3loxumnf" path="res://Scenes/board.tscn" id="5_q0mm3"]
+[ext_resource type="PackedScene" uid="uid://ckx0nxsr2gugd" path="res://Scenes/board.tscn" id="5_q0mm3"]
 [ext_resource type="PackedScene" uid="uid://35vtxokflop4" path="res://Scenes/player movement.tscn" id="11_dlo4w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yn8b"]

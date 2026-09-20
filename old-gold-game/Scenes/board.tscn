@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://fhou3loxumnf"]
+[gd_scene format=3 uid="uid://ckx0nxsr2gugd"]
 
-[ext_resource type="Script" uid="uid://bp1srhygl4u8x" path="res://Scripts/board.gd" id="1_tnbny"]
+[ext_resource type="Script" uid="uid://bwomnc80n3h2u" path="res://Scripts/board.gd" id="1_tnbny"]
 [ext_resource type="Texture2D" uid="uid://dnf3jru0gvivu" path="res://Assets/Sprites/DisplayBoard.png" id="2_s4i1f"]
 [ext_resource type="Shader" uid="uid://w3o8gtw23fyv" path="res://Assets/Shaders/SilhoutteSprite.gdshader" id="2_shhme"]
 [ext_resource type="Texture2D" uid="uid://bud7q6ldvbaar" path="res://Assets/Sprites/waterTile.png" id="3_s4i1f"]

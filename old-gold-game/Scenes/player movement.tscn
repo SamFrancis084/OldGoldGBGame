@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cxjuun8w73cd1" path="res://Scripts/player_movement.gd" id="1_cqoxo"]
 [ext_resource type="AudioStream" uid="uid://dj1bcrid1cxic" path="res://Assets/Audio/step.wav" id="2_5llcl"]
 [ext_resource type="Texture2D" uid="uid://dt0o3000etlr6" path="res://Assets/Sprites/PlayerCharacter-22x27-Sheet.png" id="2_mob4q"]
+[ext_resource type="AudioStream" uid="uid://bi62q10mf844m" path="res://Assets/Audio/stone_step.wav" id="3_e6oin"]
+[ext_resource type="AudioStream" uid="uid://dtapir52sary3" path="res://Assets/Audio/wet_step.wav" id="4_du3wt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5llcl"]
 atlas = ExtResource("2_mob4q")
@@ -151,7 +153,10 @@ script = ExtResource("1_cqoxo")
 SPD = 5000
 tileSize = 16
 animSPD = 0.15
-step_clip = ExtResource("2_5llcl")
+default_step = ExtResource("2_5llcl")
+rock_step = ExtResource("3_e6oin")
+water_step = ExtResource("4_du3wt")
+step_rate = 0.3
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=2068644574]
 texture_filter = 1

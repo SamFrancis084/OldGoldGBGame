@@ -159,6 +159,9 @@ func button_tracker():
 	
 
 func win():
+	if ItemHolder.item_list.has(current_item):
+		current_item.unlocked = true
+	
 	PlayerScore.current_score += 100
 	MusicManager.play_slow_song()
 	if item_tr: item_tr.texture = current_item.sprite

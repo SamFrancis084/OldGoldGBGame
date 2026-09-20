@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bl4hrkxoxsy0j" path="res://Assets/Sprites/GoldDuck.png" id="2_50ct6"]
 [ext_resource type="AudioStream" uid="uid://1ygue56pgetp" path="res://Assets/Audio/sift.wav" id="2_ak5v8"]
 [ext_resource type="AudioStream" uid="uid://jeni1go0bsvq" path="res://Assets/Audio/timer.wav" id="3_x033f"]
-[ext_resource type="Texture2D" uid="uid://p24buj3wy5vj" path="res://Assets/Sprites/NewPan.png" id="4_x033f"]
+[ext_resource type="Texture2D" uid="uid://bs1otkvt4ujvi" path="res://Assets/Sprites/Pan_Brown.png" id="4_oho3u"]
 [ext_resource type="Texture2D" uid="uid://48usye2olr85" path="res://Assets/Sprites/Dirt-Sheet-64x64px.png" id="6_rdbpf"]
 [ext_resource type="Texture2D" uid="uid://bbion6lugbmi" path="res://Assets/Sprites/Arrows.png" id="7_rdbpf"]
 [ext_resource type="FontFile" uid="uid://388i3owm2jfr" path="res://Assets/Fonts/8-bit-operator/8bitOperatorPlus8-Bold.ttf" id="8_oho3u"]
@@ -71,7 +71,7 @@ zoom = Vector2(0.2, 0.2)
 [node name="PanSprite" type="Sprite2D" parent="." unique_id=1524625846]
 texture_filter = 3
 scale = Vector2(2.4722228, 2.472222)
-texture = ExtResource("4_x033f")
+texture = ExtResource("4_oho3u")
 
 [node name="GoldSprite" type="Sprite2D" parent="." unique_id=288017580]
 texture_filter = 3

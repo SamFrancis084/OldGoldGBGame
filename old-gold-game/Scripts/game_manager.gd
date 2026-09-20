@@ -3,6 +3,8 @@ extends Node
 
 var is_fs : bool = false
 
+var last_pos : Vector2 = Vector2(96, 56)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("Restart"): get_tree().reload_current_scene()

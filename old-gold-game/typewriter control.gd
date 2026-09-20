@@ -19,7 +19,7 @@ func _process(delta):
 		wait_time += delta
 		return
 		
-	if wait_time >= 1.0:
+	if wait_time >= 1.0 && i < string_array.size():
 		
 		pause_time += delta
 		
@@ -28,7 +28,8 @@ func _process(delta):
 		pause_time = 0.0
 		if i >= string_array.size():
 			#$RichTextLabel.text = ""
-			return
+			$Sprite2D/AnimationPlayer.play("titlecard_rise")
+			
 		else:
 			show_word()
 		

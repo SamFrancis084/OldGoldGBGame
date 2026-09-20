@@ -110,4 +110,5 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Board" parent="." unique_id=1157778481 instance=ExtResource("5_q0mm3")]
 z_index = 2
-position = Vector2(87, 18)
+y_sort_enabled = true
+position = Vector2(84, 5)

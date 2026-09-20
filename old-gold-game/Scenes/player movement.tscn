@@ -144,10 +144,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqoxo"]
 size = Vector2(16, 5)
 
-[node name="player movement" type="Node2D" unique_id=27736371]
-
-[node name="player" type="CharacterBody2D" parent="." unique_id=537363910]
-position = Vector2(-1, 1)
+[node name="player movement" type="CharacterBody2D" unique_id=537363910]
 collision_layer = 2
 script = ExtResource("1_cqoxo")
 SPD = 5000
@@ -158,16 +155,17 @@ rock_step = ExtResource("3_e6oin")
 water_step = ExtResource("4_du3wt")
 step_rate = 0.3
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=2068644574]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2068644574]
 texture_filter = 1
+position = Vector2(0, -12.5)
 sprite_frames = SubResource("SpriteFrames_giie4")
 animation = &"walk_down"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=514228860]
-position = Vector2(0, 10.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=514228860]
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_cqoxo")
 
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=1486405084]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1486405084]
 limit_left = 0
 limit_top = 0
 limit_right = 960

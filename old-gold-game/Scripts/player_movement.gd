@@ -18,6 +18,7 @@ var step_timer : float = 0.0
 @export var footstep_tile_map : TileMapLayer
 var rock_id : int = 0
 var water_id : int = 1
+var previous_id : int = -1
 
 func _physics_process(delta: float) -> void:
 	
@@ -59,12 +60,16 @@ func footstep_audio(delta):
 		var tile_pos = footstep_tile_map.local_to_map(local)
 		
 		var source_id = footstep_tile_map.get_cell_source_id(tile_pos)
+		
 		match source_id:
 			rock_id:
 				step_clip = rock_step
 			water_id:
 				step_clip = water_step
-		print(source_id)
+		
+		if source_id != previous_id: #make new sound when you step on new surface
+			step_timer = 0.0
+			previous_id = source_id
 	
 	step_timer -= delta
 	if input_dir:

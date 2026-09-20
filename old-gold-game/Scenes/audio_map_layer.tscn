@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c887wte1pt3ka"]
+
+[ext_resource type="Texture2D" uid="uid://cdlrkpoourrgd" path="res://Assets/Sprites/rockTile.png" id="1_pr83i"]
+[ext_resource type="Texture2D" uid="uid://bud7q6ldvbaar" path="res://Assets/Sprites/waterTile.png" id="2_nr05k"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mwsv2"]
+texture = ExtResource("1_pr83i")
+texture_region_size = Vector2i(12, 12)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1ymc"]
+texture = ExtResource("2_nr05k")
+texture_region_size = Vector2i(12, 12)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_h6dpl"]
+tile_size = Vector2i(12, 12)
+sources/0 = SubResource("TileSetAtlasSource_mwsv2")
+sources/1 = SubResource("TileSetAtlasSource_x1ymc")
+
+[node name="AudioMapLayer" type="TileMapLayer" unique_id=759342120]
+texture_filter = 3
+tile_set = SubResource("TileSet_h6dpl")

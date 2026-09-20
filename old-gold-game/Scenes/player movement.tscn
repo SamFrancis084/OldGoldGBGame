@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cxjuun8w73cd1" path="res://Scripts/player_movement.gd" id="1_cqoxo"]
 [ext_resource type="AudioStream" uid="uid://dj1bcrid1cxic" path="res://Assets/Audio/step.wav" id="2_5llcl"]
 [ext_resource type="Texture2D" uid="uid://dt0o3000etlr6" path="res://Assets/Sprites/PlayerCharacter-22x27-Sheet.png" id="2_mob4q"]
+[ext_resource type="AudioStream" uid="uid://bi62q10mf844m" path="res://Assets/Audio/stone_step.wav" id="3_e6oin"]
+[ext_resource type="AudioStream" uid="uid://dtapir52sary3" path="res://Assets/Audio/wet_step.wav" id="4_du3wt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5llcl"]
 atlas = ExtResource("2_mob4q")
@@ -142,27 +144,28 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqoxo"]
 size = Vector2(16, 5)
 
-[node name="player movement" type="Node2D" unique_id=27736371]
-
-[node name="player" type="CharacterBody2D" parent="." unique_id=537363910]
-position = Vector2(-1, 1)
+[node name="player movement" type="CharacterBody2D" unique_id=537363910]
 collision_layer = 2
 script = ExtResource("1_cqoxo")
-SPD = 5000
+SPD = 3000
 tileSize = 16
 animSPD = 0.15
-step_clip = ExtResource("2_5llcl")
+default_step = ExtResource("2_5llcl")
+rock_step = ExtResource("3_e6oin")
+water_step = ExtResource("4_du3wt")
+step_rate = 0.3
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=2068644574]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2068644574]
 texture_filter = 1
+position = Vector2(0, -12.5)
 sprite_frames = SubResource("SpriteFrames_giie4")
 animation = &"walk_down"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=514228860]
-position = Vector2(0, 10.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=514228860]
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_cqoxo")
 
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=1486405084]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1486405084]
 limit_left = 0
 limit_top = 0
 limit_right = 960

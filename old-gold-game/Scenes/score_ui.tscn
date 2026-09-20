@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c68sxf6vvirsx"]
 
 [ext_resource type="Script" uid="uid://mbs4u0seod8n" path="res://Scripts/score_ui.gd" id="1_slsms"]
+[ext_resource type="FontFile" uid="uid://388i3owm2jfr" path="res://Assets/Fonts/8-bit-operator/8bitOperatorPlus8-Bold.ttf" id="2_7kmc4"]
 
 [node name="ScoreUi" type="Control" unique_id=2015588002]
 layout_mode = 3
@@ -17,9 +18,13 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -80.0
+offset_top = 4.0
 offset_right = 80.0
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.9529412, 0.6784314, 1)
+theme_override_colors/font_shadow_color = Color(0.25882354, 0.1764706, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_7kmc4")
 theme_override_font_sizes/font_size = 8
 text = "Score: 0"
 horizontal_alignment = 1

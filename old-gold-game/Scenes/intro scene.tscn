@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://duljfcui4osbi"]
+
+[ext_resource type="Script" uid="uid://dp75cg14uglq7" path="res://typewriter control.gd" id="1_ndmx6"]
+[ext_resource type="Texture2D" uid="uid://bkedckautmugj" path="res://Assets/Sprites/logo1.png" id="2_a1mdr"]
+
+[sub_resource type="Animation" id="Animation_3wyl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(78, 195)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_mv6w3"]
+resource_name = "titlecard_rise"
+length = 1.1333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1333333, 1.2166666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(78, 195), Vector2(78, 66), Vector2(78, 71)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l4cm5"]
+_data = {
+&"RESET": SubResource("Animation_3wyl7"),
+&"titlecard_rise": SubResource("Animation_mv6w3")
+}
+
+[node name="Control" type="Control" unique_id=2143324051]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ndmx6")
+typeSPD = 0.7
+string_array = Array[String](["Hark, all ye panners of gold", "For the time hath come upon us once more", "Golden streams spread across this blessed land", "So go forth, oh ye panners of gold"])
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=487437048]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.20400001
+anchor_bottom = 0.066
+offset_left = 9.0
+offset_top = 32.0
+offset_right = 118.36
+offset_bottom = 95.496
+theme_override_font_sizes/normal_font_size = 11
+text = "Muuaaah"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=194367954]
+position = Vector2(78, 195)
+texture = ExtResource("2_a1mdr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=2087494236]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_l4cm5")

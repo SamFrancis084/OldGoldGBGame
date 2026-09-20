@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://b1noyrmortf6q" path="res://Assets/Sprites/old gold choccy.png" id="5_1prth"]
 [ext_resource type="Texture2D" uid="uid://bmo0r1qiei45u" path="res://Assets/Sprites/suspicious coin.png" id="6_nud32"]
 [ext_resource type="Texture2D" uid="uid://cfbs352ohvi7h" path="res://Assets/Sprites/golden delisious worm.png" id="7_enkfh"]
+[ext_resource type="Texture2D" uid="uid://x4grtxyanar0" path="res://Assets/Sprites/badge.png" id="8_upqjx"]
+[ext_resource type="Texture2D" uid="uid://dmls700ktcc6m" path="res://Assets/Sprites/cigs.png" id="9_6r5ca"]
+[ext_resource type="Texture2D" uid="uid://dipcogttq7gr6" path="res://Assets/Sprites/fish.png" id="10_anlvf"]
+[ext_resource type="Texture2D" uid="uid://dwxi6kn2eb6fh" path="res://Assets/Sprites/goldenDuck.png" id="11_kye5y"]
 
 [sub_resource type="Resource" id="Resource_f8jq6"]
 script = ExtResource("2_y5niy")
@@ -38,6 +42,30 @@ item_name = "Four Apples"
 sprite = ExtResource("7_enkfh")
 metadata/_custom_type_script = "uid://ct4stocjou76b"
 
+[sub_resource type="Resource" id="Resource_c3ggt"]
+script = ExtResource("2_y5niy")
+item_name = "Badge"
+sprite = ExtResource("8_upqjx")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_sujlx"]
+script = ExtResource("2_y5niy")
+item_name = "Small Box"
+sprite = ExtResource("9_6r5ca")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_w1gvh"]
+script = ExtResource("2_y5niy")
+item_name = "Gold-like Fish"
+sprite = ExtResource("10_anlvf")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
+[sub_resource type="Resource" id="Resource_nk1ye"]
+script = ExtResource("2_y5niy")
+item_name = "Rubber Duck"
+sprite = ExtResource("11_kye5y")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
 [node name="ItemHolder" type="Node" unique_id=1263430781]
 script = ExtResource("1_w482a")
-item_list = Array[ExtResource("2_y5niy")]([SubResource("Resource_f8jq6"), SubResource("Resource_upqjx"), SubResource("Resource_6r5ca"), SubResource("Resource_anlvf"), SubResource("Resource_1prth")])
+item_list = Array[ExtResource("2_y5niy")]([SubResource("Resource_f8jq6"), SubResource("Resource_upqjx"), SubResource("Resource_6r5ca"), SubResource("Resource_anlvf"), SubResource("Resource_1prth"), SubResource("Resource_c3ggt"), SubResource("Resource_sujlx"), SubResource("Resource_w1gvh"), SubResource("Resource_nk1ye")])

@@ -43,7 +43,6 @@ var tick_timer : float = 0.0
 @export var using_arrows : bool = false
 @export var arrow_sprite : Sprite2D
 @export var name_label : Label
-@export var shadow_label : Label
 @export var label : Label
 @export var time_left : Label
 @export var item_tr : TextureRect
@@ -166,7 +165,6 @@ func win():
 	MusicManager.play_slow_song()
 	if item_tr: item_tr.texture = current_item.sprite
 	name_label.text = "You uncovered " +  current_item.item_name + "!"
-	shadow_label.text = name_label.text
 	
 	if victory_screen: victory_screen.visible = true
 

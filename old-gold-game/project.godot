@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="OldGoldGame"
-run/main_scene="uid://bc0fn8uflceuh"
+run/main_scene="uid://duljfcui4osbi"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

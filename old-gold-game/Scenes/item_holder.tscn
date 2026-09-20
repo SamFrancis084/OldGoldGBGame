@@ -66,6 +66,10 @@ item_name = "Rubber Duck"
 sprite = ExtResource("11_kye5y")
 metadata/_custom_type_script = "uid://ct4stocjou76b"
 
+[sub_resource type="Resource" id="Resource_kye5y"]
+script = ExtResource("2_y5niy")
+metadata/_custom_type_script = "uid://ct4stocjou76b"
+
 [node name="ItemHolder" type="Node" unique_id=1263430781]
 script = ExtResource("1_w482a")
-item_list = Array[ExtResource("2_y5niy")]([SubResource("Resource_f8jq6"), SubResource("Resource_upqjx"), SubResource("Resource_6r5ca"), SubResource("Resource_anlvf"), SubResource("Resource_1prth"), SubResource("Resource_c3ggt"), SubResource("Resource_sujlx"), SubResource("Resource_w1gvh"), SubResource("Resource_nk1ye")])
+item_list = Array[ExtResource("2_y5niy")]([SubResource("Resource_f8jq6"), SubResource("Resource_upqjx"), SubResource("Resource_6r5ca"), SubResource("Resource_anlvf"), SubResource("Resource_1prth"), SubResource("Resource_c3ggt"), SubResource("Resource_sujlx"), SubResource("Resource_w1gvh"), SubResource("Resource_nk1ye"), SubResource("Resource_kye5y")])

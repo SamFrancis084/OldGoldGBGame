@@ -1,15 +1,33 @@
 extends Control
 
+@export var can_skip : bool = true
+
 @export var typeSPD = 0.1
 @export var string_array: Array[String]
 @export var i = 0
 @export var wait_time  = 0.0
 @export var pause_time = 0.0
+
+var main_scene : PackedScene = preload("uid://bc0fn8uflceuh")
+
 func _ready():
 	
 	show_word()
 	
 
+func _input(event):
+	if not can_skip: return
+	
+	if event is InputEventKey and event.pressed and not event.echo:
+		if i == string_array.size():
+			$Sprite2D/AnimationPlayer.play("titlecard_rise")
+			i += 1
+			#get_tree().change_scene_to_packed(main_scene)
+		elif i > string_array.size():
+			get_tree().change_scene_to_packed(main_scene)
+		else:
+			i += 1
+			show_word()
 
 func _process(delta):
 	
@@ -29,13 +47,13 @@ func _process(delta):
 		if i >= string_array.size():
 			#$RichTextLabel.text = ""
 			$Sprite2D/AnimationPlayer.play("titlecard_rise")
-			
 		else:
 			show_word()
 		
-		
 
 func show_word():
+	if i >= string_array.size(): return #safety check
+	
 	$RichTextLabel.text = string_array[i]
 	$RichTextLabel.visible_ratio = 0.0
 	wait_time = 0.0

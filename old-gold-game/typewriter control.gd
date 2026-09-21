@@ -10,6 +10,8 @@ extends Control
 
 var main_scene : PackedScene = preload("uid://bc0fn8uflceuh")
 
+var anim_played : bool = false
+
 func _ready():
 	
 	show_word()
@@ -20,8 +22,12 @@ func _input(event):
 	
 	if event.is_action_pressed("Interact") and not event.echo:
 		if i == string_array.size():
-			$Sprite2D/AnimationPlayer.play("titlecard_rise")
-			i += 1
+			if not anim_played:
+				$Sprite2D/AnimationPlayer.play("titlecard_rise")
+				anim_played = true
+				i += 1
+			else:
+				get_tree().change_scene_to_packed(main_scene)
 			#get_tree().change_scene_to_packed(main_scene)
 		elif i > string_array.size():
 			get_tree().change_scene_to_packed(main_scene)
@@ -47,6 +53,7 @@ func _process(delta):
 		if i >= string_array.size():
 			#$RichTextLabel.text = ""
 			$Sprite2D/AnimationPlayer.play("titlecard_rise")
+			anim_played = true
 		else:
 			show_word()
 		

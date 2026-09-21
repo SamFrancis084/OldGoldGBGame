@@ -28,6 +28,7 @@ PlayerScore="*uid://c2nq4wt4x8cpp"
 
 window/size/viewport_width=160
 window/size/viewport_height=144
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 
 [input]

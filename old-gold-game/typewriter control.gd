@@ -18,7 +18,7 @@ func _ready():
 func _input(event):
 	if not can_skip: return
 	
-	if event is InputEventKey and event.pressed and not event.echo:
+	if event.is_action_pressed("Interact") and not event.echo:
 		if i == string_array.size():
 			$Sprite2D/AnimationPlayer.play("titlecard_rise")
 			i += 1

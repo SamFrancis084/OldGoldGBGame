@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://dp75cg14uglq7" path="res://typewriter control.gd" id="1_ndmx6"]
 [ext_resource type="FontFile" uid="uid://cpu4wm21vle1x" path="res://Assets/Fonts/8-bit-operator/8bitOperatorPlus-Bold.ttf" id="2_3wyl7"]
 [ext_resource type="Texture2D" uid="uid://bkedckautmugj" path="res://Assets/Sprites/logo1.png" id="2_a1mdr"]
+[ext_resource type="Texture2D" uid="uid://chmb03na8w3td" path="res://Assets/Sprites/Sprite-0001.png" id="2_mv6w3"]
 
 [sub_resource type="Animation" id="Animation_3wyl7"]
-length = 0.001
+length = 3.8666666
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -40,7 +41,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(9, 32)]
+"values": [Vector2(21, 42)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -54,10 +55,22 @@ tracks/3/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/game start:theme_override_colors/default_color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_mv6w3"]
 resource_name = "titlecard_rise"
-length = 1.3
+length = 1.8666667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -89,10 +102,10 @@ tracks/2/path = NodePath("RichTextLabel:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.2, 1.09),
+"times": PackedFloat32Array(0.22, 1.09),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(9, 32), Vector2(9, -76)]
+"values": [Vector2(20.863636, 40.659092), Vector2(20.863636, -26.999996)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -101,10 +114,22 @@ tracks/3/path = NodePath("RichTextLabel:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.2, 1.09),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.2, 0.21, 0.22, 1.09),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0]
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/game start:theme_override_colors/default_color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.5333333, 1.7333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l4cm5"]
@@ -124,26 +149,50 @@ script = ExtResource("1_ndmx6")
 typeSPD = 0.7
 string_array = Array[String](["Hark, all ye panners of gold", "For the time hath come upon us once more", "Golden streams spread across this blessed land", "So go forth, oh ye panners of gold"])
 
+[node name="bg" type="Sprite2D" parent="." unique_id=1077235888]
+position = Vector2(80, 72)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("2_mv6w3")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=487437048]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.20400001
 anchor_bottom = 0.066
-offset_left = 9.0
-offset_top = 32.0
-offset_right = 118.36
-offset_bottom = 95.496
+offset_left = 21.0
+offset_top = 42.0
+offset_right = 106.36
+offset_bottom = 105.496
 theme_override_colors/default_color = Color(1, 0.9529412, 0.6784314, 1)
+theme_override_colors/font_shadow_color = Color(0.25882354, 0.1764706, 0.17254902, 1)
+theme_override_constants/shadow_outline_size = 1
 theme_override_fonts/normal_font = ExtResource("2_3wyl7")
-theme_override_font_sizes/normal_font_size = 11
-text = "Muuaaah"
+theme_override_font_sizes/normal_font_size = 9
+text = "sample txt"
 horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=194367954]
 texture_filter = 1
 position = Vector2(78, 195)
+scale = Vector2(0.83, 0.83)
 texture = ExtResource("2_a1mdr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=2087494236]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_l4cm5")
+
+[node name="game start" type="RichTextLabel" parent="Sprite2D" unique_id=154071837]
+anchors_preset = -1
+anchor_right = 0.20400001
+anchor_bottom = 0.066
+offset_left = -51.80723
+offset_top = 48.19275
+offset_right = 33.552773
+offset_bottom = 111.68875
+theme_override_colors/default_color = Color(1, 1, 0.6784314, 0)
+theme_override_colors/font_shadow_color = Color(0.25882354, 0.1764706, 0.17254902, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/normal_font = ExtResource("2_3wyl7")
+theme_override_font_sizes/normal_font_size = 9
+text = "press E"
+horizontal_alignment = 1
